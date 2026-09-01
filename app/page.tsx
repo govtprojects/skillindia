@@ -1,69 +1,46 @@
-import Image from "next/image";
+const navItems = [
+  "Home", "About Us", "Training", "Schemes", "Gallery", "Student Corner", "Contact Us",
+];
+
+const courses = [
+  { icon: "⌘", title: "Digital Skills", text: "Computer essentials and workplace technology." },
+  { icon: "✦", title: "Industry Training", text: "Practical, job-ready technical programmes." },
+  { icon: "↗", title: "Career Guidance", text: "Support from enrolment to placement." },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen overflow-hidden bg-[#f8faf7] text-[#12302b]">
+      <div className="bg-[#123f37] px-5 py-2.5 text-center text-xs font-medium tracking-wide text-white sm:text-right sm:pr-[8%]">
+        <span className="mr-5">✦ Empowering lives through skills</span>
+        <span className="hidden sm:inline">| &nbsp; admissions@skillindia.in &nbsp; | &nbsp; +91 1800 123 456</span>
+      </div>
+
+      <header className="relative z-10 border-b border-[#dce7df] bg-white/95 px-5 py-4 backdrop-blur sm:px-[8%]">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-5">
+          <a href="#home" className="flex items-center gap-3"><div className="grid h-11 w-11 place-items-center rounded-full bg-[#e88032] text-lg font-black text-white shadow-sm">S</div><div><p className="font-serif text-xl font-bold tracking-tight text-[#174a40]">Skill India</p><p className="text-[9px] font-bold uppercase tracking-[0.18em] text-[#bd6426]">Skill Development Mission</p></div></a>
+          <nav aria-label="Main navigation" className="order-3 flex w-full flex-wrap justify-center gap-x-5 gap-y-2 text-sm font-semibold text-[#355a52] lg:order-2 lg:w-auto">
+            {navItems.map((item, index) => <a key={item} href={index === 0 ? "#home" : `#${item.toLowerCase().replaceAll(" ", "-")}`} className={`transition hover:text-[#e8752b] ${index === 0 ? "text-[#e8752b]" : ""}`}>{item}</a>)}
+          </nav>
+          <a href="#contact-us" className="hidden rounded-full bg-[#e8752b] px-5 py-2.5 text-sm font-bold text-white transition hover:bg-[#c96120] sm:block">Apply now</a>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </header>
+
+      <section id="home" className="relative isolate bg-[#eaf2ed] px-5 py-16 sm:px-[8%] lg:py-24">
+        <div className="absolute inset-0 -z-10 opacity-50 [background-image:radial-gradient(#90b3a3_1px,transparent_1px)] [background-size:22px_22px]" />
+        <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_.95fr]">
+          <div><p className="mb-5 flex items-center gap-2 text-sm font-bold uppercase tracking-[0.18em] text-[#cf6d2c]"><span className="h-px w-8 bg-[#cf6d2c]" /> Learn. Grow. Lead.</p><h1 className="max-w-2xl font-serif text-5xl font-bold leading-[1.04] tracking-tight text-[#123f37] sm:text-6xl">Building skills.<br /><span className="text-[#e8752b]">Creating futures.</span></h1><p className="mt-6 max-w-xl text-lg leading-8 text-[#527068]">A place where ambition meets opportunity. Gain practical skills, trusted guidance, and the confidence to build your own future.</p><div className="mt-8 flex flex-wrap gap-3"><a href="#training" className="rounded-full bg-[#174a40] px-6 py-3.5 font-bold text-white shadow-lg shadow-[#174a40]/15 transition hover:-translate-y-0.5">Explore training <span className="ml-2">→</span></a><a href="#about-us" className="rounded-full border border-[#a7c1b5] bg-white px-6 py-3.5 font-bold text-[#174a40] transition hover:border-[#174a40]">Know about us</a></div><div className="mt-11 flex gap-8 border-t border-[#c8dacf] pt-6"><div><p className="font-serif text-3xl font-bold text-[#174a40]">12k+</p><p className="text-xs font-semibold text-[#628077]">Learners trained</p></div><div><p className="font-serif text-3xl font-bold text-[#174a40]">86%</p><p className="text-xs font-semibold text-[#628077]">Placement support</p></div><div><p className="font-serif text-3xl font-bold text-[#174a40]">24</p><p className="text-xs font-semibold text-[#628077]">Learning centres</p></div></div></div>
+          <div className="relative mx-auto w-full max-w-lg"><div className="absolute -left-7 top-12 h-28 w-28 rounded-full bg-[#f7b046] opacity-90" /><div className="absolute -right-6 bottom-7 h-36 w-36 rounded-[2rem] bg-[#a7cfc2]" /><div className="relative overflow-hidden rounded-[2.5rem] border-[10px] border-white bg-[#1e6457] p-7 shadow-2xl shadow-[#174a40]/20 sm:p-10"><div className="absolute inset-0 opacity-25 [background-image:linear-gradient(135deg,transparent_48%,#ffffff_49%,#ffffff_51%,transparent_52%)] [background-size:28px_28px]" /><div className="relative min-h-80 rounded-[1.7rem] border border-white/30 bg-gradient-to-br from-[#3f8876] to-[#174a40] p-7 text-white"><div className="flex items-center justify-between"><span className="rounded-full bg-white/15 px-3 py-1 text-xs font-bold">SKILL INDIA PARTNER</span><span className="text-2xl">✱</span></div><div className="mt-14"><p className="text-sm font-medium text-[#d2f0df]">Your journey starts here</p><p className="mt-2 max-w-[16rem] font-serif text-4xl font-bold leading-tight">A brighter path for every learner.</p></div><div className="absolute bottom-7 right-7 grid h-16 w-16 place-items-center rounded-full bg-[#e8752b] text-2xl shadow-lg">↗</div></div></div><div className="absolute -bottom-6 -left-5 flex items-center gap-3 rounded-2xl bg-white p-4 shadow-xl"><span className="grid h-10 w-10 place-items-center rounded-full bg-[#fff1e7] text-lg text-[#e8752b]">✓</span><p className="text-xs font-bold leading-5 text-[#174a40]">Recognised programmes<br />for real-world careers</p></div></div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section id="about-us" className="px-5 py-20 sm:px-[8%]"><div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.85fr_1.15fr]"><div className="rounded-3xl bg-[#174a40] p-8 text-white sm:p-10"><p className="text-sm font-bold uppercase tracking-[0.16em] text-[#f4b34f]">Our purpose</p><p className="mt-6 font-serif text-4xl font-bold leading-tight">Skills that open doors.</p><p className="mt-5 leading-7 text-[#d8ebe1]">We connect people to practical learning, meaningful work, and stronger communities.</p></div><div className="self-center"><p className="text-sm font-bold uppercase tracking-[0.16em] text-[#d36f2c]">Why Skill India</p><h2 className="mt-3 font-serif text-4xl font-bold text-[#174a40]">A learning experience built around you.</h2><p className="mt-4 max-w-2xl leading-7 text-[#5d7870]">From your first class to your first opportunity, our centres provide accessible, hands-on education with a clear focus on confidence and employability.</p></div></div></section>
+
+      <section id="training" className="bg-[#f2f6f1] px-5 py-20 sm:px-[8%]"><div className="mx-auto max-w-7xl"><div className="flex flex-wrap items-end justify-between gap-5"><div><p className="text-sm font-bold uppercase tracking-[0.16em] text-[#d36f2c]">Training programmes</p><h2 className="mt-3 font-serif text-4xl font-bold text-[#174a40]">Skills for the world of work.</h2></div><a href="#schemes" className="font-bold text-[#d36f2c] hover:underline">View all programmes →</a></div><div className="mt-10 grid gap-5 md:grid-cols-3">{courses.map((course) => <article key={course.title} className="rounded-2xl border border-[#dbe8df] bg-white p-7 transition hover:-translate-y-1 hover:shadow-xl"><span className="grid h-12 w-12 place-items-center rounded-xl bg-[#e7f2eb] text-2xl font-bold text-[#e8752b]">{course.icon}</span><h3 className="mt-6 font-serif text-2xl font-bold text-[#174a40]">{course.title}</h3><p className="mt-3 leading-7 text-[#668078]">{course.text}</p><a href="#contact-us" className="mt-6 inline-block text-sm font-bold text-[#d36f2c]">Learn more →</a></article>)}</div></div></section>
+      <section id="gallery" className="px-5 py-20 sm:px-[8%]"><div className="mx-auto max-w-7xl"><p className="text-sm font-bold uppercase tracking-[0.16em] text-[#d36f2c]">Gallery</p><h2 className="mt-3 font-serif text-4xl font-bold text-[#174a40]">Learning in action.</h2><div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4"><div className="h-44 rounded-2xl bg-[#b9d8ca]" /><div className="h-44 rounded-2xl bg-[#f3bb68]" /><div className="h-44 rounded-2xl bg-[#6fa995]" /><div className="h-44 rounded-2xl bg-[#e7dac6]" /></div></div></section>
+      <section id="schemes" className="bg-[#e8752b] px-5 py-16 text-center text-white sm:px-[8%]"><p className="text-sm font-bold uppercase tracking-[0.18em] text-[#fff0df]">Government schemes</p><h2 className="mx-auto mt-3 max-w-2xl font-serif text-4xl font-bold">The right support can change everything.</h2><a href="#contact-us" className="mt-7 inline-block rounded-full bg-white px-6 py-3 font-bold text-[#c55d21]">Find your scheme</a></section>
+      <section id="student-corner" className="bg-[#f2f6f1] px-5 py-16 sm:px-[8%]"><div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-5"><div><p className="text-sm font-bold uppercase tracking-[0.16em] text-[#d36f2c]">Student corner</p><h2 className="mt-2 font-serif text-3xl font-bold text-[#174a40]">Everything you need, in one place.</h2></div><a href="#contact-us" className="rounded-full bg-[#174a40] px-6 py-3 font-bold text-white">Student login →</a></div></section>
+      <footer id="contact-us" className="bg-[#102e28] px-5 py-12 text-[#d7e8e0] sm:px-[8%]"><div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-5"><div><p className="font-serif text-2xl font-bold text-white">Skill India</p><p className="mt-1 text-sm">Skill Development Mission</p></div><p className="text-sm">© 2026 Skill India. Building futures, together.</p><a href="mailto:admissions@skillindia.in" className="rounded-full border border-[#537b70] px-5 py-2.5 text-sm font-bold text-white">Get in touch</a></div></footer>
+    </main>
   );
 }
