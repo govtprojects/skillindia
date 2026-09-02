@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "skillindia",
-  description: "Practical skills, meaningful opportunities, stronger futures.",
+  title: "T2T Skill Foundation | Skill Development & Training",
+  description: "Vocational skill development, inclusive training and career opportunities by T2T Skill Foundation.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
