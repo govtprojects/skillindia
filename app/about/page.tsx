@@ -1,7 +1,7 @@
 import { Breadcrumb, Footer, Navbar, PageHero } from "../components/site";
 import { team } from "../components/data";
 
-const coverImage = "/BAL VIDYALAYA/activity/WhatsApp Image 2026-09-03 at 4.55.14 PM (2).jpeg";
+const coverImage = "/about/WhatsApp Image 2026-09-03 at 4.55.14 PM (1).jpeg";
 
 const values = [
   ["01", "Mission", "Practical vocational training that supports livelihood, dignity and economic independence."],
