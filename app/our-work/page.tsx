@@ -1,3 +1,79 @@
-import {Navbar,Footer,PageHero,Breadcrumb} from "../components/site";import {courses} from "../components/data";
-const coverImage = "/School Admission Rules_ Rules for admission from class 6th to 8th changed, new guidelines issued - informalnewz.jpeg";
-export default function Work(){return <><Navbar/><main><Breadcrumb current="Our Work"/><PageHero eyebrow="Training programmes" title="Skills for the work ahead." copy="Professional programmes spanning digital, technical, apparel and automotive skills." imageSrc={coverImage} imageAlt="Skills for the work ahead cover image"/><section className="section"><div className="course-grid">{courses.map(([name,duration,language,sector,eligibility,price,cert],i)=><article key={name} className="course"><span>0{i+1}</span><h3>{name}</h3><p>{sector} · Available full time</p><dl><div><dt>Duration</dt><dd>{duration}</dd></div><div><dt>Language</dt><dd>{language}</dd></div><div><dt>Eligibility</dt><dd>{eligibility}</dd></div><div><dt>Price</dt><dd>{price}</dd></div></dl><footer>NSDC certification <b>{cert}</b></footer></article>)}</div><div className="notice">For training details, contact <b>Bibhuti Bhusan Swain · Training Department Head</b><a href="tel:+919692287330">96922 87330 →</a></div></section></main><Footer/></>}
+import { Breadcrumb, Footer, Navbar, PageHero } from "../components/site";
+import { courses } from "../components/data";
+import Image from "next/image";
+
+const coverImage = "/about/Classroom studying student child_  _ premium image by rawpixel.com _ audi";
+
+const courseDescriptions: Record<string, string> = {
+  "Domestic Data Entry Operator": "Build the keyboard, document-processing and data-handling skills needed for entry-level digital work.",
+  "Sewing Machine Operator · AMH/Q0301": "Learn safe machine operation and the core production skills used in apparel manufacturing.",
+  "Tailoring Course for Beginners": "Start with measurements, fabric handling, cutting and basic garment construction techniques.",
+  "Field Technician – Computers & Peripherals": "Develop practical skills to install, troubleshoot and maintain computers and common peripherals.",
+  "Advance Diploma in Computer Application": "Strengthen your digital foundation with workplace-ready computer applications and office tools.",
+  "CorelDRAW 2022 Essential Training": "Learn the design workspace, vector graphics and layout tools used to create professional artwork.",
+  "AutoCAD Essentials for Civil Engineer": "Create accurate technical drawings and learn essential drafting workflows for civil projects.",
+  "Web Design & Development": "Explore the essentials of planning, designing and building clear, usable websites.",
+  "Mobile Repairing": "Understand common mobile hardware and software issues, diagnostics and basic repair practices.",
+  "Automotive Service Technician": "Gain an introduction to vehicle servicing, inspection and workshop safety procedures.",
+  "Introduction to Automobiles": "Discover how vehicle systems work and the foundational concepts behind automotive careers.",
+  "Solar Panel Installation Technician": "Learn the fundamentals of solar systems, installation support and safe on-site practices.",
+};
+
+const courseImages: Record<string, { src: string; alt: string }> = {
+  "Domestic Data Entry Operator": { src: "/folderforuse/Domestic-Data-Entry-1.jpg", alt: "Domestic data entry training" },
+  "Sewing Machine Operator · AMH/Q0301": { src: "/folderforuse/sewing-machine-operator-course-500x500.webp", alt: "Sewing machine operator at work" },
+  "Tailoring Course for Beginners": { src: "/folderforuse/images.jpeg", alt: "Tailoring and sewing work" },
+  "Field Technician – Computers & Peripherals": { src: "/folderforuse/desktop-repair-1.webp", alt: "Desktop computer repair work" },
+  "Advance Diploma in Computer Application": { src: "/folderforuse/210222071953.jpg", alt: "Computer application course" },
+  "CorelDRAW 2022 Essential Training": { src: "/folderforuse/advance-coreldraw-training-in-borivali-mumbai.webp", alt: "CorelDRAW design training" },
+  "AutoCAD Essentials for Civil Engineer": { src: "/folderforuse/courseCovers_9135ad8bfe51_1780145782318.jpg", alt: "Civil design and AutoCAD planning" },
+  "Web Design & Development": { src: "/folderforuse/Complete-Guide-to-Web-Development-and-Design.jpg", alt: "Web design and development" },
+  "Mobile Repairing": { src: "/folderforuse/mobile-repairing-technician.png", alt: "Mobile repairing technician" },
+  "Automotive Service Technician": { src: "/folderforuse/mechanic-and-vehicle-technician.jpg", alt: "Automotive service technician" },
+  "Introduction to Automobiles": { src: "/folderforuse/automotive-technician.png", alt: "Automotive technician at work" },
+  "Solar Panel Installation Technician": { src: "/folderforuse/23aa.jpg", alt: "Solar panel installation training" },
+};
+
+export default function Work() {
+  return (
+    <>
+      <Navbar />
+      <main>
+        <Breadcrumb current="Our Work" />
+        <div className="work-hero-banner">
+          <PageHero eyebrow="Training programmes" title="Skills for the work ahead." copy="Professional programmes spanning digital, technical, apparel and automotive skills." imageSrc={coverImage} imageAlt="Skills for the work ahead cover image" imageBelow />
+        </div>
+        <section className="section programmes-section">
+          <div className="programmes-heading">
+            <div><p className="eyebrow">Explore our courses</p><h2 className="section-heading">Learning with a clear career direction.</h2></div>
+            <p>Each programme combines job-relevant learning with a straightforward view of duration, eligibility and certification availability.</p>
+          </div>
+          <div className="programme-summary" aria-label="Programme summary">
+            <div><b>{courses.length}</b><span>programmes available</span></div>
+            <div><b>4</b><span>skill sectors represented</span></div>
+            <div><b>NSDC</b><span>certification status shown per course</span></div>
+          </div>
+          <div className="course-grid course-grid--detailed">
+            {courses.map(([name, duration, language, sector, eligibility, price, cert], index) => (
+              <article key={name} className="course">
+                <div className="course-image"><Image src={courseImages[name].src} alt={courseImages[name].alt} width={640} height={360} sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" /></div>
+                <div className="course-topline"><span>Programme {String(index + 1).padStart(2, "0")}</span><b>{sector === "—" ? "Skill training" : sector}</b></div>
+                <h3>{name}</h3>
+                <p className="course-description">{courseDescriptions[name]}</p>
+                <dl>
+                  <div><dt>Duration</dt><dd>{duration}</dd></div>
+                  <div><dt>Language</dt><dd>{language}</dd></div>
+                  <div><dt>Eligibility</dt><dd>{eligibility}</dd></div>
+                  <div><dt>Course fee</dt><dd>{price}</dd></div>
+                </dl>
+                <footer><span>NSDC certification</span><b>{cert}</b></footer>
+              </article>
+            ))}
+          </div>
+          <div className="notice"><div><span>Need help choosing a programme?</span><b>Bibhuti Bhusan Swain · Training Department Head</b></div><a href="tel:+919692287330">Call 96922 87330 <span aria-hidden="true">→</span></a></div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}

@@ -15,7 +15,7 @@ export default function About() {
       <Navbar />
       <main>
         <Breadcrumb current="About Us" />
-        <PageHero eyebrow="About T2T" title="A foundation for possibility." copy="Quality skill development designed to lead to livelihood, inclusion and stronger communities." imageSrc={coverImage} imageAlt="T2T Skill Foundation training activity" imageBelow />
+        <PageHero eyebrow="About T2T" title="A foundation for possibility." copy="Quality skill development designed to lead to livelihood, inclusion and stronger communities." imageSrc={coverImage} imageAlt="T2T Skill Foundation training activity" imageOverlay />
         <section className="section about-intro">
           <div className="about-intro-label"><p className="eyebrow">Who we are</p><p>Building skills that open doors.</p></div>
           <div className="about-intro-copy">
