@@ -40,7 +40,7 @@ export function BalGalleryCarousel({ photos }: { photos: GalleryPhoto[] }) {
 
   return <div ref={viewportRef} className="bal-carousel-viewport" onMouseEnter={pause} onMouseLeave={resume} onFocusCapture={pause} onBlurCapture={resume} onPointerDown={pause} onPointerUp={resume} onPointerCancel={resume} aria-label="Bal Vidyalaya photo gallery">
     <div className="bal-carousel-track">
-      {[0, 1].map(setIndex => <div ref={setIndex === 0 ? firstSetRef : undefined} className="bal-carousel-set" aria-hidden={setIndex === 1} key={setIndex}>{photos.map(photo => <figure className="bal-carousel-card" key={`${setIndex}-${photo.src}`}><Image src={photo.src} alt={setIndex === 0 ? photo.alt : ""} fill sizes="(max-width: 600px) 78vw, (max-width: 900px) 45vw, 320px" quality={85} /><figcaption>{photo.label}</figcaption></figure>)}</div>)}
+      {[0, 1].map(setIndex => <div ref={setIndex === 0 ? firstSetRef : undefined} className="bal-carousel-set" aria-hidden={setIndex === 1} key={setIndex}>{photos.map(photo => <figure className="bal-carousel-card" key={`${setIndex}-${photo.src}`}><Image className="bal-photo" src={photo.src} alt={setIndex === 0 ? photo.alt : ""} fill sizes="(max-width: 600px) 78vw, (max-width: 900px) 45vw, 320px" quality={90} /><figcaption>{photo.label}</figcaption></figure>)}</div>)}
     </div>
   </div>;
 }
