@@ -109,3 +109,6 @@
 .topbar{height:39px;font-size:11px}
 
 .bal-programme-mark{display:block;width:min(300px,100%);height:auto;margin-top:28px}
+
+/* Scheme information drawn from the programme documentation. */
+.scheme-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin:38px 0;border-top:1px solid var(--line);border-left:1px solid var(--line)}.scheme-facts div{display:grid;gap:7px;padding:19px 20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.scheme-facts span{color:var(--muted);font:10px 'DM Mono';letter-spacing:.04em;text-transform:uppercase}.scheme-facts b{color:var(--deep);font-size:14px;line-height:1.4}.scheme-highlights{margin:48px 0 36px}.scheme-highlights .eyebrow{margin-bottom:12px}.scheme-highlights h2{font-size:clamp(30px,3.2vw,42px)}.scheme-highlights ul{display:grid;gap:12px;margin:24px 0 0;padding:0;list-style:none}.scheme-highlights li{position:relative;padding-left:20px;color:#48615a;font-size:14px;line-height:1.7}.scheme-highlights li::before{content:"";position:absolute;top:.72em;left:0;width:7px;height:7px;border-radius:50%;background:var(--orange)}@media(max-width:600px){.scheme-facts{grid-template-columns:1fr;margin:30px 0}.scheme-facts div{padding:16px}.scheme-facts b{font-size:13px}.scheme-highlights{margin:38px 0 30px}.scheme-highlights li{font-size:13px}}
