@@ -1,9 +1,15 @@
-export const schemePhotos: Record<string, { src: string; alt: string }[]> = {
+type SchemePhoto = {
+  src: string;
+  alt: string;
+  objectPosition?: string;
+};
+
+export const schemePhotos: Record<string, SchemePhoto[]> = {
 
   pmgdisha: [
-    { src: "/about/assessment (17).jpg", alt: "Learners completing a digital skills assessment" },
-    { src: "/about/PHOTO11 (7).jpg", alt: "Learners receiving digital skills support" },
-    { src: "/about/PHOTO11 (8).jpg", alt: "Digital skills training in progress" }
+    { src: "/about/WhatsApp Image 2024-12-12 at 3.55.40 PM.jpeg", alt: "Learners completing a digital skills assessment" },
+    { src: "/about/PHOTO11 (7).jpeg", alt: "Learners receiving digital skills support", objectPosition: "center top" },
+    { src: "/about/PHOTO11 (8).jpeg", alt: "Digital skills training in progress", objectPosition: "center top" }
   ],
 
   "pmkvy-rpl": [
@@ -13,9 +19,9 @@ export const schemePhotos: Record<string, { src: string; alt: string }[]> = {
   ],
 
   "nsdc-paid-segment": [
-    { src: "/about/PHOTO11 (8).jpg", alt: "Learners taking part in a skills training session" },
+    { src: "/about/PHOTO11 (8).jpeg", alt: "Learners taking part in a skills training session", objectPosition: "center top" },
     { src: "/about/assessment (17).jpg", alt: "Participants at a skills assessment" },
-    { src: "/about/PHOTO11 (7).jpg", alt: "Skills programme participants" }
+    { src: "/about/PHOTO11 (7).jpeg", alt: "Skills programme participants", objectPosition: "center top" }
   ],
 
   sipda: [

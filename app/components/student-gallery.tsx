@@ -4,15 +4,15 @@ import Image from "next/image";
 import { useRef } from "react";
 
 const photos = [
-  { src: "/CIMCA/IMG-20250305-WA0050.jpg", alt: "Learners presenting their practical work", label: "Making & design" },
-  { src: "/CIMCA/IMG-20250306-WA0026.jpg", alt: "Students learning computer skills", label: "Digital skills" },
-  { src: "/OSDA/PHOTO22 (1).jpeg", alt: "Student practising sewing skills", label: "Hands-on learning" },
-  { src: "/OSDA/PHOTO24 (4).jpeg", alt: "Students taking part in practical training", label: "Career-ready training" },
+  { src: "/about/IMG-20250306-WA0031.jpg", alt: "Learners presenting their practical work", label: "Making & design" },
+  { src: "/about/IMG-20250306-WA0026.jpg", alt: "Students learning computer skills", label: "Digital skills" },
+  { src: "/about/PHOTO22 (1).jpeg", alt: "Student practising sewing skills", label: "Hands-on learning" },
+  { src: "/about/PHOTO24 (4).jpeg", alt: "Students taking part in practical training", label: "Career-ready training" },
 ];
 
 const videos = [
-  { src: "/about/sewing.mp4", poster: "/OSDA/PHOTO22 (1).jpeg", title: "Practical sewing training" },
-  { src: "/about/it lab.mp4", poster: "/CIMCA/IMG-20250306-WA0026.jpg", title: "Computer lab learning" },
+  { src: "/about/sewing.mp4", poster: "/about/PHOTO22 (1).jpeg", title: "Practical sewing training" },
+  { src: "/about/it lab.mp4", poster: "/about/IMG-20250306-WA0026.jpg", title: "Computer lab learning" },
 ];
 
 function HoverVideo({ src, poster, title }: (typeof videos)[number]) {
