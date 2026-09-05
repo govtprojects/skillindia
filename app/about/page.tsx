@@ -20,7 +20,7 @@ export default function About() {
           <div className="about-intro-label"><p className="eyebrow">Who we are</p><p>Building skills that open doors.</p></div>
           <div className="about-intro-copy">
             <h2>Learning that moves people forward.</h2>
-            <p>T2T Skill Foundation is an approved Training Partner of Skill India. Established in 2019, we bring experience in delivering financial training schemes across districts in Odisha.</p>
+            <p>T2T Skill Foundation is an Established in 2019, we bring experience in delivering financial training schemes across districts in Odisha.</p>
             <p>We go beyond vocational training to create sustainable self-employment and wage-employment opportunities for candidates, including Persons with Disabilities (PwDs).</p>
             <div className="about-highlights" aria-label="T2T Skill Foundation highlights"><div><b>2019</b><span>Established</span></div><div><b>80%</b><span>Employment transition goal</span></div><div><b>Odisha</b><span>Community rooted</span></div></div>
           </div>
