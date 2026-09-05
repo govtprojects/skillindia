@@ -34,6 +34,15 @@ const courseImages: Record<string, { src: string; alt: string }> = {
   "Solar Panel Installation Technician": { src: "/folderforuse/23aa.jpg", alt: "Solar panel installation training" },
 };
 
+const successStories = [
+  { name: "Bigyani Pradhan", src: "/success/BIGYANI PRADHAN.jpg" },
+  { name: "Nabin Behera", src: "/success/NABIN BEHERA.jpg" },
+  { name: "Sanoshini Pradhan", src: "/success/SANOSHINI PRADHAN.jpg" },
+  { name: "Sibananda Behera", src: "/success/SIBANANDA BEHERA.jpg" },
+  { name: "Vicky Sahu", src: "/success/VICKY SAHU.jpg" },
+  { name: "Krishna Swain", src: "/success/krishna swain.jpg" },
+];
+
 export default function Work() {
   return (
     <>
@@ -88,20 +97,14 @@ export default function Work() {
           </div>
         </section>
         <section id="success-stories" className="section work-outcomes">
-          <div className="work-outcomes-heading"><div><p className="eyebrow">Success stories</p><h2 className="section-heading">From learning to a livelihood.</h2></div><p>Every programme is designed to help learners turn new skills into more confident, independent futures.</p></div>
-          <div className="work-story-grid">
-            <article><span>01</span><h3>Practical skills</h3><p>Hands-on learning helps learners build confidence for real workplace tasks.</p></article>
-            <article><span>02</span><h3>Career support</h3><p>Guidance, interview preparation and employer connections make the next step clearer.</p></article>
-            <article><span>03</span><h3>Inclusive growth</h3><p>Training creates opportunities for both general candidates and Persons with Disabilities.</p></article>
-          </div>
+          <div className="work-outcomes-heading"><div><p className="eyebrow">Success Stories</p><h2 className="section-heading">Transforming lives, one skill at a time</h2></div><p>Discover inspiring stories of individuals who upskilled, redefined their careers, and unlocked new opportunities through training programs.</p></div>
+          <div className="success-story-grid">{successStories.map((story, index) => <figure key={story.src} className="success-story-card"><div className="success-story-image"><Image src={story.src} alt={`${story.name}, T2T Skill Foundation learner`} fill sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" quality={88} /></div><figcaption><span>Success story {String(index + 1).padStart(2, "0")}</span><b>{story.name}</b></figcaption></figure>)}</div>
         </section>
         <section id="achievements" className="work-achievements">
           <div className="section work-achievements-inner">
             <div><p className="eyebrow">Achievements</p><h2>Progress you can see.</h2></div>
             <div className="work-achievements-content">
-              <figure className="work-achievement-image">
-                <Image src="/dhenkanala_1.jpg" alt="T2T Skill Foundation achievement programme in Dhenkanal" width={5400} height={3600} sizes="(max-width: 900px) 86vw, 42vw" />
-              </figure>
+              <div className="work-achievement-gallery"><figure className="work-achievement-image"><Image src="/dhenkanala_1.jpg" alt="T2T Skill Foundation achievement programme in Dhenkanal" width={5400} height={3600} sizes="(max-width: 600px) 86vw, 42vw" /></figure><figure className="work-achievement-image"><Image src="/JOB FAIR.jpg.jpeg" alt="T2T Skill Foundation job fair" width={10802} height={7202} sizes="(max-width: 600px) 86vw, 42vw" /></figure></div>
               <div className="work-achievement-stats"><article><b>2019</b><span>established to create skill and employment opportunities in Odisha</span></article><article><b>890</b><span>current vacancies available through employer opportunities</span></article><article><b>PwD</b><span>inclusive training focus across programmes and partnerships</span></article></div>
             </div>
           </div>

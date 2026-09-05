@@ -11,8 +11,8 @@ const gallery = (folder: string, files: string[], description: string): SchemePh
   }));
 
 export const schemePhotos: Record<string, SchemePhoto[]> = {
-  pmgdisha: gallery("/pmgdisha", ["pmkvy (13).jpg", "pmkvy (14).jpg", "pmkvy (15).jpg", "pmkvy (16).jpg", "pmkvy (17).jpg", "pmkvy (20).jpg"], "PMGDISHA digital skills training"),
-  "pmkvy-rpl": gallery("/pmgkvy", ["pmkvy (3).jpg", "pmkvy (4).jpg", "pmkvy (5).jpg", "pmkvy (18).jpg", "pmkvy (19).jpg", "pmkvy (21).jpg"], "PMKVY vocational training"),
+  pmgdisha: gallery("/pmgdisha", ["pmkvy (13).jpg", "pmkvy (14).jpg", "pmkvy (15).jpg", "pmkvy (17).jpg"], "PMGDISHA digital skills training"),
+  "pmkvy-rpl": gallery("/pmkvy", ["pmkvy (3).jpg", "pmkvy (4).jpg", "pmkvy (5).jpg", "pmkvy (18).jpg", "pmkvy (19).jpg", "pmkvy (21).jpg"], "PMKVY vocational training"),
   "nsdc-paid-segment": [
     { src: "/cemca/IMG-20250308-WA0095.jpg", alt: "NSDC learners during technical training" },
     { src: "/cemca/IMG-20250308-WA0096.jpg", alt: "NSDC skills session in progress" },
