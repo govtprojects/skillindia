@@ -16,7 +16,7 @@ export default function About() {
       <main>
         <Breadcrumb current="About Us" />
         <PageHero eyebrow="About T2T" title="A foundation for possibility." copy="Quality skill development designed to lead to livelihood, inclusion and stronger communities." imageSrc={coverImage} imageAlt="T2T Skill Foundation training activity" imageOverlay />
-        <section className="section about-intro">
+        <section id="introduction" className="section about-intro">
           <div className="about-intro-label"><p className="eyebrow">Who we are</p><p>Building skills that open doors.</p></div>
           <div className="about-intro-copy">
             <h2>Learning that moves people forward.</h2>
@@ -25,7 +25,7 @@ export default function About() {
             <div className="about-highlights" aria-label="T2T Skill Foundation highlights"><div><b>2019</b><span>Established</span></div><div><b>80%</b><span>Employment transition goal</span></div><div><b>Odisha</b><span>Community rooted</span></div></div>
           </div>
         </section>
-        <section className="about-values"><div className="section"><p className="eyebrow">What guides us</p><h2 className="section-heading">Purpose with practical impact.</h2><div className="about-values-grid">{values.map(([number,title,copy])=><article key={title}><span>{number}</span><h3>{title}</h3><p>{copy}</p></article>)}</div></div></section>
+        <section id="what-we-do" className="about-values"><div className="section"><p className="eyebrow">What guides us</p><h2 className="section-heading">Purpose with practical impact.</h2><div className="about-values-grid">{values.map(([number,title,copy])=><article key={title}><span>{number}</span><h3>{title}</h3><p>{copy}</p></article>)}</div></div></section>
         <section className="section bal-social-section">
           <p className="eyebrow">Bal Vidyalaya, Sheragada</p>
           <div>
@@ -35,9 +35,10 @@ export default function About() {
           <div className="social-links">
             <a href="https://www.instagram.com/bal_vidyalaya_sheragada/" target="_blank" rel="noreferrer">Instagram ↗</a>
             <a href="https://www.youtube.com/@CSCBALVIDYALAYASheragada" target="_blank" rel="noreferrer">YouTube ↗</a>
+            <a href="https://www.facebook.com/T2TSKILLFOUNDATION" target="_blank" rel="noreferrer">Facebook ↗</a>
           </div>
         </section>
-        <section className="team-section"><div className="section"><p className="eyebrow">Our team</p><div className="team-heading"><h2 className="section-heading">People behind the work.</h2><p>Committed to making training accessible, relevant and connected to real opportunity.</p></div><div className="team-grid">{team.map(([name,role],index)=><article key={name}><span>{String(index+1).padStart(2,"0")}</span><b>{name}</b><small>{role}</small></article>)}</div></div></section>
+        <section id="our-team" className="team-section"><div className="section"><p className="eyebrow">Our team</p><div className="team-heading"><h2 className="section-heading">People behind the work.</h2><p>Committed to making training accessible, relevant and connected to real opportunity.</p></div><div className="team-grid">{team.map(([name,role],index)=><article key={name}><span>{String(index+1).padStart(2,"0")}</span><b>{name}</b><small>{role}</small></article>)}</div></div></section>
       </main>
       <Footer />
     </>

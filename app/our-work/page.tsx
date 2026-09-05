@@ -43,7 +43,7 @@ export default function Work() {
         <div className="work-hero-banner">
           <PageHero eyebrow="Training programmes" title="Skills for the work ahead." copy="Professional programmes spanning digital, technical, apparel and automotive skills." imageSrc={coverImage} imageAlt="Skills for the work ahead cover image" imageBelow />
         </div>
-        <section className="section programmes-section">
+        <section id="training" className="section programmes-section">
           <div className="programmes-heading">
             <div><p className="eyebrow">Explore our courses</p><h2 className="section-heading">Learning with a clear career direction.</h2></div>
             <p>Each programme combines job-relevant learning with a straightforward view of duration, eligibility and certification availability.</p>
@@ -86,6 +86,17 @@ export default function Work() {
               </article>)}
             </div>
           </div>
+        </section>
+        <section id="success-stories" className="section work-outcomes">
+          <div className="work-outcomes-heading"><div><p className="eyebrow">Success stories</p><h2 className="section-heading">From learning to a livelihood.</h2></div><p>Every programme is designed to help learners turn new skills into more confident, independent futures.</p></div>
+          <div className="work-story-grid">
+            <article><span>01</span><h3>Practical skills</h3><p>Hands-on learning helps learners build confidence for real workplace tasks.</p></article>
+            <article><span>02</span><h3>Career support</h3><p>Guidance, interview preparation and employer connections make the next step clearer.</p></article>
+            <article><span>03</span><h3>Inclusive growth</h3><p>Training creates opportunities for both general candidates and Persons with Disabilities.</p></article>
+          </div>
+        </section>
+        <section id="achievements" className="work-achievements">
+          <div className="section work-achievements-inner"><div><p className="eyebrow">Achievements</p><h2>Progress you can see.</h2></div><div className="work-achievement-stats"><article><b>2019</b><span>established to create skill and employment opportunities in Odisha</span></article><article><b>890</b><span>current vacancies available through employer opportunities</span></article><article><b>PwD</b><span>inclusive training focus across programmes and partnerships</span></article></div></div>
         </section>
       </main>
       <Footer />
