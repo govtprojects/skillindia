@@ -96,7 +96,15 @@ export default function Work() {
           </div>
         </section>
         <section id="achievements" className="work-achievements">
-          <div className="section work-achievements-inner"><div><p className="eyebrow">Achievements</p><h2>Progress you can see.</h2></div><div className="work-achievement-stats"><article><b>2019</b><span>established to create skill and employment opportunities in Odisha</span></article><article><b>890</b><span>current vacancies available through employer opportunities</span></article><article><b>PwD</b><span>inclusive training focus across programmes and partnerships</span></article></div></div>
+          <div className="section work-achievements-inner">
+            <div><p className="eyebrow">Achievements</p><h2>Progress you can see.</h2></div>
+            <div className="work-achievements-content">
+              <figure className="work-achievement-image">
+                <Image src="/dhenkanala_1.jpg" alt="T2T Skill Foundation achievement programme in Dhenkanal" width={5400} height={3600} sizes="(max-width: 900px) 86vw, 42vw" />
+              </figure>
+              <div className="work-achievement-stats"><article><b>2019</b><span>established to create skill and employment opportunities in Odisha</span></article><article><b>890</b><span>current vacancies available through employer opportunities</span></article><article><b>PwD</b><span>inclusive training focus across programmes and partnerships</span></article></div>
+            </div>
+          </div>
         </section>
       </main>
       <Footer />
