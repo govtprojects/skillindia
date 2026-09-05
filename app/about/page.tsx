@@ -26,6 +26,17 @@ export default function About() {
           </div>
         </section>
         <section className="about-values"><div className="section"><p className="eyebrow">What guides us</p><h2 className="section-heading">Purpose with practical impact.</h2><div className="about-values-grid">{values.map(([number,title,copy])=><article key={title}><span>{number}</span><h3>{title}</h3><p>{copy}</p></article>)}</div></div></section>
+        <section className="section bal-social-section">
+          <p className="eyebrow">Bal Vidyalaya, Sheragada</p>
+          <div>
+            <h2>See learning in action.</h2>
+            <p>Follow Bal Vidyalaya for school activities, student achievements and everyday moments of joyful learning.</p>
+          </div>
+          <div className="social-links">
+            <a href="https://www.instagram.com/bal_vidyalaya_sheragada/" target="_blank" rel="noreferrer">Instagram ↗</a>
+            <a href="https://www.youtube.com/@CSCBALVIDYALAYASheragada" target="_blank" rel="noreferrer">YouTube ↗</a>
+          </div>
+        </section>
         <section className="team-section"><div className="section"><p className="eyebrow">Our team</p><div className="team-heading"><h2 className="section-heading">People behind the work.</h2><p>Committed to making training accessible, relevant and connected to real opportunity.</p></div><div className="team-grid">{team.map(([name,role],index)=><article key={name}><span>{String(index+1).padStart(2,"0")}</span><b>{name}</b><small>{role}</small></article>)}</div></div></section>
       </main>
       <Footer />
