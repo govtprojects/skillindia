@@ -4,14 +4,14 @@ import { BalGalleryCarousel } from "../components/bal-gallery-carousel";
 import { BalNews } from "../components/bal-news";
 
 const photos = [
+  { src: "/balvidyalay/activity/WhatsApp Image 2026-09-03 at 4.54.42 PM (1).jpeg", alt: "Educators performing a tricolour dance at the Independence Day programme", label: "Tricolour on the floor" },
+  { src: "/balvidyalay/activity/WhatsApp Image 2026-09-03 at 4.54.41 PM (2).jpeg", alt: "Staff dancing in a line before the Happy Independence Day banner", label: "A school in celebration" },
+  { src: "/balvidyalay/activity/WhatsApp Image 2026-09-03 at 4.54.56 PM.jpeg", alt: "Children dancing on stage at Annual Function Celebrations 2025", label: "Annual Function on stage" },
+  { src: "/balvidyalay/activity/WhatsApp Image 2026-09-03 at 4.55.04 PM (1).jpeg", alt: "Independence Day flag hoisting with rangoli on the terrace", label: "Independence Day" },
   { src: "/balvidyalay/activity/WhatsApp Image 2026-09-03 at 4.55.17 PM.jpeg", alt: "Children lined up outdoors in house-colour uniforms", label: "House colours on parade" },
   { src: "/balvidyalay/activity/WhatsApp Image 2026-09-03 at 4.41.26 PM.jpeg", alt: "Children standing together for morning prayer", label: "A shared beginning" },
-  { src: "/balvidyalay/activity/WhatsApp Image 2026-09-03 at 4.41.58 PM.jpeg", alt: "Two children in cultural costumes for Independence Day", label: "Stories we wear" },
   { src: "/balvidyalay/activity/WhatsApp Image 2026-09-03 at 4.54.34 PM.jpeg", alt: "Children taking part in an outdoor school activity", label: "Play in the courtyard" },
-  { src: "/balvidyalay/activity/WhatsApp Image 2026-09-03 at 4.54.24 PM.jpeg", alt: "Children and teachers sharing a school activity moment", label: "Growing together" },
   { src: "/balvidyalay/activity/WhatsApp Image 2026-09-03 at 4.42.00 PM.jpeg", alt: "Children in traditional costume at a cultural programme", label: "Festival on the mats" },
-  { src: "/balvidyalay/activity/WhatsApp Image 2026-09-03 at 4.54.52 PM.jpeg", alt: "A school activity captured in the Bal Vidyalaya courtyard", label: "Everyday discovery" },
-  { src: "/balvidyalay/activity/WhatsApp Image 2026-09-03 at 4.55.15 PM.jpeg", alt: "Learners taking part in a guided group activity", label: "Learning by doing" },
 ];
 
 export default function BalVidyalaya() {
@@ -21,6 +21,6 @@ export default function BalVidyalaya() {
     <section className="bal-principles"><div className="section"><p className="eyebrow">Our learning world</p><div className="bal-principles-heading"><h2>Built around children and their wonder.</h2><p>We make room for play, friendship, movement and meaningful discovery in every learning experience.</p></div><div className="bal-principles-grid"><article><span>01</span><h3>Learn by doing</h3><p>Hands-on activities make ideas memorable and help children build skills naturally.</p></article><article><span>02</span><h3>Grow with confidence</h3><p>Encouragement and care help every child find their voice and feel proud to participate.</p></article><article><span>03</span><h3>Discover together</h3><p>Shared play and guided exploration nurture curiosity, kindness and connection.</p></article></div></div></section>
     <section className="section bal-gallery-section"><div className="bal-gallery-heading"><div><p className="eyebrow">Life at Bal Vidyalaya</p><h2>Little moments. Big learning.</h2></div><p>From creative classroom activities to proud celebrations, these are the moments that make our school feel like home.</p></div><BalGalleryCarousel photos={photos} /></section>
     <BalNews />
-    <section className="bal-closing"><div className="bal-closing-image"><Image src="/balvidyalay/activity/WhatsApp Image 2026-09-03 at 4.55.16 PM.jpeg" alt="Bal Vidyalaya children celebrating a school activity together" width={1280} height={960} sizes="(max-width: 900px) 100vw, 50vw" quality={90} /></div><div className="bal-closing-copy"><p className="eyebrow">Every day matters</p><h2>Here, every milestone is worth celebrating.</h2><p>We celebrate curiosity, courage and the small steps that help children become confident learners.</p><a href="/contact" className="btn">Talk to our team →</a></div></section>
+    <section className="bal-closing"><div className="bal-closing-image"><Image src="/balvidyalay/activity/WhatsApp Image 2026-09-03 at 4.55.16 PM (1).jpeg" alt="Children with certificates of competition, trophies and flags at Bal Vidyalaya" width={1280} height={960} sizes="(max-width: 900px) 100vw, 50vw" quality={90} /></div><div className="bal-closing-copy"><p className="eyebrow">Every day matters</p><h2>Here, every milestone is worth celebrating.</h2><p>We celebrate curiosity, courage and the small steps that help children become confident learners.</p><a href="/contact" className="btn">Talk to our team →</a></div></section>
   </main><Footer /></>;
 }
