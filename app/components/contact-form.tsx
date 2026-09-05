@@ -9,7 +9,7 @@ const initialForm = {
   state: "",
   district: "",
   message: "",
-  website: "",
+  _honeypot: "",
 };
 
 type FormValues = typeof initialForm;
@@ -57,7 +57,7 @@ export function ContactForm() {
       <label>State<input name="state" value={form.state} onChange={(event) => updateField("state", event.target.value)} autoComplete="address-level1" required /></label>
       <label>District<input name="district" value={form.district} onChange={(event) => updateField("district", event.target.value)} autoComplete="address-level2" required /></label>
       <label className="contact-form-message">Message<textarea name="message" value={form.message} onChange={(event) => updateField("message", event.target.value)} rows={5} required /></label>
-      <label className="contact-form-honeypot" aria-hidden="true">Website<input name="website" value={form.website} onChange={(event) => updateField("website", event.target.value)} tabIndex={-1} autoComplete="off" /></label>
+      <label className="contact-form-honeypot" aria-hidden="true">Leave blank<input name="_honeypot" value={form._honeypot} onChange={(event) => updateField("_honeypot", event.target.value)} tabIndex={-1} autoComplete="off" /></label>
     </div>
     {feedback && <p className={`contact-form-feedback contact-form-feedback--${status}`} role="status">{feedback}</p>}
     <button className="contact-form-submit" type="submit" disabled={status === "sending"}>{status === "sending" ? "SENDING MESSAGE…" : "SEND MESSAGE"}<span aria-hidden="true">→</span></button>
