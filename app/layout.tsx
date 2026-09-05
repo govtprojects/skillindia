@@ -4,6 +4,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "T2T Skill Foundation | Skill Development & Training",
   description: "Vocational skill development, inclusive training and career opportunities by T2T Skill Foundation.",
+  icons: {
+    icon: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
