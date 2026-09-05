@@ -1,5 +1,5 @@
 import { Breadcrumb, Footer, Navbar, PageHero } from "../components/site";
-import { courses } from "../components/data";
+import { courses, placements } from "../components/data";
 import Image from "next/image";
 
 const coverImage = "/about/Classroom studying student child_  _ premium image by rawpixel.com _ audi";
@@ -71,6 +71,21 @@ export default function Work() {
             ))}
           </div>
           <div className="notice"><div><span>Need help choosing a programme?</span><b>Bibhuti Bhusan Swain · Training Department Head</b></div><a href="tel:+919692287330">Call 96922 87330 <span aria-hidden="true">→</span></a></div>
+        </section>
+        <section id="placements" className="work-placements">
+          <div className="section work-placements-inner">
+            <div className="work-placements-heading">
+              <div><p className="eyebrow">Placements</p><h2 className="section-heading">Training that leads somewhere.</h2></div>
+              <p>Explore current fresher-friendly roles with employers across India. Our placement team helps learners take the next step after training.</p>
+            </div>
+            <div className="work-placement-summary"><b>890</b><span>current vacancies across six employer opportunities</span><a href="tel:+919437661164">Talk to our placement team <i aria-hidden="true">→</i></a></div>
+            <div className="work-placement-list">
+              {placements.map(([role, company, location, type, vacancies, salary]) => <article key={role}>
+                <div><span>{company}</span><h3>{role}</h3></div>
+                <dl><div><dt>Location</dt><dd>{location}</dd></div><div><dt>Role type</dt><dd>{type}</dd></div><div><dt>Vacancies</dt><dd>{vacancies}</dd></div><div><dt>Salary</dt><dd>{salary}</dd></div></dl>
+              </article>)}
+            </div>
+          </div>
         </section>
       </main>
       <Footer />
