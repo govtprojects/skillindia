@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { AchievementHoverVideo } from "./achievement-hover-video";
-import { achievementMilestones, achievementStats } from "./achievement-data";
+import { achievementFeatureVideos, achievementMilestones, achievementStats } from "./achievement-data";
 
 export function AchievementsSection() {
   return (
@@ -59,6 +59,23 @@ export function AchievementsSection() {
             </div>
           </article>
         ))}
+      </div>
+
+      <div className="section achievements-videos">
+        <div className="achievements-videos-heading">
+          <p className="eyebrow">Event footage</p>
+          <h2>See the milestone in action</h2>
+        </div>
+        <div className="achievements-video-grid">
+          {achievementFeatureVideos.map((video) => (
+            <AchievementHoverVideo
+              key={video.src}
+              src={video.src}
+              title={video.title}
+              year={video.year}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

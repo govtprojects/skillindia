@@ -42,7 +42,6 @@ export const achievementMilestones: AchievementMilestone[] = [
     ],
     image: asset("dhenkanala_1.jpg"),
     imageAlt: "Kaushal Mahotsav event with offer letters presented to trained candidates in Dhenkanal",
-    video: asset("VID-20260906-WA0001.mp4"),
   },
   {
     id: "sambalpur-kaushal",
@@ -98,7 +97,6 @@ export const achievementMilestones: AchievementMilestone[] = [
     ],
     image: asset("nua odisha director.jpg"),
     imageAlt: "Official visit to the Sheragada training centre for sewing machine operator and apparel training",
-    video: asset("VID-20260906-WA0003.mp4"),
   },
   {
     id: "convocation-fy2026",
@@ -137,3 +135,16 @@ export const achievementMilestones: AchievementMilestone[] = [
     imageAlt: "SANKALP convocation and flagging-off ceremony for placed candidates",
   },
 ];
+
+export const achievementFeatureVideos = [
+  {
+    src: asset("VID-20260906-WA0001.mp4"),
+    year: "2022",
+    title: "Empowering Differently-Abled Youth at Kamakhyanagar, Dhenkanal",
+  },
+  {
+    src: asset("VID-20260906-WA0003.mp4"),
+    year: "2025",
+    title: "High-Level Inspection & Guidance at Skill Development Centre, Sheragada",
+  },
+] as const;
