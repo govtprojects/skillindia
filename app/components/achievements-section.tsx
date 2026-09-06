@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { AchievementHoverVideo } from "./achievement-hover-video";
 import { achievementMilestones, achievementStats } from "./achievement-data";
 
 export function AchievementsSection() {
@@ -54,14 +55,7 @@ export function AchievementsSection() {
                   className="achievement-photo"
                 />
               </figure>
-              {item.video && (
-                <figure className="achievement-video">
-                  <video controls preload="metadata" playsInline>
-                    <source src={item.video} type="video/mp4" />
-                  </video>
-                  <figcaption>Event highlights</figcaption>
-                </figure>
-              )}
+              {item.video && <AchievementHoverVideo src={item.video} />}
             </div>
           </article>
         ))}
