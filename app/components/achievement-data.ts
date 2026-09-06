@@ -60,7 +60,6 @@ export const achievementMilestones: AchievementMilestone[] = [
     ],
     image: asset("sambalpur.jpg"),
     imageAlt: "Kaushal Mahotsav Sambalpur with candidates receiving offer letters",
-    video: asset("VID-20260906-WA0000.mp4"),
   },
   {
     id: "ganjam-2025",
@@ -79,7 +78,6 @@ export const achievementMilestones: AchievementMilestone[] = [
     ],
     image: asset("succ..jpg"),
     imageAlt: "Offer letter distribution ceremony for placed candidates in Ganjam",
-    video: asset("VID-20260906-WA0002(1).mp4"),
   },
   {
     id: "official-visit-2025",
@@ -146,5 +144,15 @@ export const achievementFeatureVideos = [
     src: asset("VID-20260906-WA0003.mp4"),
     year: "2025",
     title: "High-Level Inspection & Guidance at Skill Development Centre, Sheragada",
+  },
+  {
+    src: asset("VID-20260906-WA0002(1).mp4"),
+    year: "2025",
+    title: "Championing Inclusive Employment — 59 Divyang Candidates Placed",
+  },
+  {
+    src: asset("VID-20260906-WA0000.mp4"),
+    year: "Kaushal Mahotsav",
+    title: "Empowering Divyang Youth at Kaushal Mahotsav, Sambalpur",
   },
 ] as const;

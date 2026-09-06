@@ -1,8 +1,7 @@
 import { notFound } from "next/navigation";
 import { Footer, Navbar, PageHero } from "../../components/site";
+import { WhatWeDoSection } from "../../components/what-we-do-section";
 import { team } from "../../components/data";
-
-const values = [["01", "Mission", "Practical vocational training that supports livelihood, dignity and economic independence."], ["02", "Vision", "Inclusive opportunity where skills lead to meaningful work and stronger communities."], ["03", "Values", "Quality, inclusion, self-reliance and community-centred progress."]] as const;
 
 export default async function AboutSection({ params }: { params: Promise<{ section: string }> }) {
   const { section } = await params;
@@ -21,7 +20,7 @@ and Persons with Disabilities (PwDs). Recognizing that employment is a powerful 
 economic independence, dignity, and social inclusion, the organization aims to empower trained
 candidates to become Employee, entrepreneurs and service providers within their own
 communities.</p><p>We create sustainable self-employment and wage-employment opportunities for candidates, including Persons with Disabilities.</p><div className="about-highlights"><div><b>2019</b><span>Established</span></div><div><b>80%</b><span>Employment transition goal</span></div><div><b>Odisha</b><span>Community rooted</span></div></div></div></section>}
-    {section === 'what-we-do' && <section className="about-values"><div className="section"><p className="eyebrow">What guides us</p><h2 className="section-heading">Skills with a lasting impact.</h2><div className="about-values-grid">{values.map(([number, title, copy]) => <article key={title}><span>{number}</span><h3>{title}</h3><p>{copy}</p></article>)}</div></div></section>}
+    {section === 'what-we-do' && <WhatWeDoSection />}
     {section === 'our-team' && <section className="team-section"><div className="section"><p className="eyebrow">Our team</p><div className="team-heading"><h2 className="section-heading">People behind the work.</h2><p>Committed to making training accessible, relevant and connected to real opportunity.</p></div><div className="team-grid">{team.map(([name, role], index) => <article key={name}><span>{String(index + 1).padStart(2, '0')}</span><b>{name}</b><small>{role}</small></article>)}</div></div></section>}
   </main><Footer /></>;
 }
