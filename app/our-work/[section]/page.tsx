@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { Footer, Navbar, PageHero } from "../../components/site";
 import { courses, placements } from "../../components/data";
 
-const stories = [["Bigyani Pradhan", "/success/BIGYANI PRADHAN.jpg"], ["Nabin Behera", "/success/NABIN BEHERA.jpg"], ["Sanoshini Pradhan", "/success/SANOSHINI PRADHAN.jpg"], ["Sibananda Behera", "/success/SIBANANDA BEHERA.jpg"], ["Vicky Sahu", "/success/VICKY SAHU.jpg"], ["Krishna Swain", "/success/krishna swain.jpg"]] as const;
+const stories = [["Bigyani Pradhan", "/success/BIGYANI PRADHAN.jpg"], ["Nabin Behera", "/success/NABIN BEHERA.jpg"], ["Santoshini Pradhan", "/success/SANOSHINI PRADHAN.jpg"], ["Sibananda Behera", "/success/SIBANANDA BEHERA.jpg"], ["Vicky Sahu", "/success/VICKY SAHU.jpg"], ["Krishna Swain", "/success/krishna swain.jpg"]] as const;
 const courseImages: Record<string, { src: string; alt: string }> = {
   "Domestic Data Entry Operator": { src: "/folderforuse/Domestic-Data-Entry-1.jpg", alt: "Domestic data entry training" },
   "Sewing Machine Operator · AMH/Q0301": { src: "/folderforuse/sewing-machine-operator-course-500x500.webp", alt: "Sewing machine operator at work" },

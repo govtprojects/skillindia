@@ -54,7 +54,7 @@ const news: NewsItem[] = [
     excerpt: "On 15 August the school gathered on the terrace around the national flag, with a hand-drawn rangoli in saffron, white and green at the foot of the pole.",
     story: "Independence Day at Bal Vidyalaya was marked with flag hoisting on the terrace. Staff and learners stood in a wide circle, many holding small flags, while a peacock rangoli in tricolour sat at the base of the pole. The day mixed ceremony and pride: colour under an open sky, and a shared song around the Tiranga.",
     tags: ["Independence Day", "Flag hoisting"],
-    image: activity("WhatsApp Image 2026-09-03 at 4.55.04 PM (1).jpeg"),
+    image: "/ind11 (37).jpeg",
     alt: "Independence Day gathering around the Indian flag and rangoli on the terrace",
   },
   {
