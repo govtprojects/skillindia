@@ -7,7 +7,7 @@ export default async function AboutSection({ params }: { params: Promise<{ secti
   const { section } = await params;
   if (!['introduction', 'what-we-do', 'our-team'].includes(section)) notFound();
   const page = section === 'introduction' ? { eyebrow: 'About T2T', title: 'Building skills that open doors.', copy: 'Learn about the purpose and people behind T2T Skill Foundation.' } : section === 'what-we-do' ? { eyebrow: 'What we do', title: 'Purpose with practical impact.', copy: 'Our work creates accessible pathways to skills, confidence and livelihood.' } : { eyebrow: 'Our team', title: 'People behind the work.', copy: 'Meet the team committed to making training accessible and relevant.' };
-  return <><Navbar /><main><div className="subpage-hero"><PageHero {...page} imageSrc="/about/WhatsApp Image 2026-09-03 at 4.55.14 PM (1).jpeg" imageAlt="T2T Skill Foundation training activity" imageOverlay /></div>
+  return <><Navbar /><main className={section === 'what-we-do' ? 'what-we-do-page' : undefined}><div className="subpage-hero"><PageHero {...page} imageSrc="/about/WhatsApp Image 2026-09-03 at 4.55.14 PM (1).jpeg" imageAlt="T2T Skill Foundation training activity" imageOverlay /></div>
     {section === 'introduction' && <section className="section about-intro"><div className="about-intro-label"><p className="eyebrow">Who we are</p><p>Learning that moves people forward.</p></div><div className="about-intro-copy"><h2>A foundation for possibility.</h2><p>T2T Skill Foundation is an approved Training Partner of Skill India. NSDC is a one of its kind,
 Public Private Partnership Company in India, under the Ministry of Skill Development &
 Entrepreneurship (Govt. of India). It aims to promote skill development by catalyzing creation of

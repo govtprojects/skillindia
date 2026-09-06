@@ -1,6 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
-import { whatWeDoIntro, whatWeDoPosterSize, whatWeDoProgrammes } from "./what-we-do-data";
+import { whatWeDoIntro } from "./what-we-do-data";
+import { WhatWeDoPosterGrid } from "./what-we-do-poster-grid";
 
 const values = [
   ["01", "Mission", "Practical vocational training that supports livelihood, dignity and economic independence."],
@@ -38,44 +37,10 @@ export function WhatWeDoSection() {
           <p className="eyebrow">Programmes & initiatives</p>
           <h2 className="section-heading">Where learning meets real opportunity.</h2>
           <p className="what-we-do-programmes-note">
-            Each card shows the full programme poster — QR codes and details are readable at full size.
+            Click any poster to open a zoom viewer — scan QR codes or read details at full size.
           </p>
         </div>
-        <div className="what-we-do-grid">
-          {whatWeDoProgrammes.map((programme, index) => (
-            <div className="what-we-do-card-wrap" key={programme.id}>
-              <article className="what-we-do-card">
-                <div className="what-we-do-card-media">
-                  <figure>
-                    <Image
-                      className="what-we-do-card-photo"
-                      src={programme.image}
-                      alt={programme.imageAlt}
-                      width={whatWeDoPosterSize.width}
-                      height={whatWeDoPosterSize.height}
-                      sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 480px"
-                      quality={92}
-                      priority={index < 2}
-                    />
-                  </figure>
-                </div>
-                <div className="what-we-do-card-body">
-                  <div className="what-we-do-card-meta">
-                    <span>{programme.label}</span>
-                    {programme.stat ? <b>{programme.stat}</b> : null}
-                  </div>
-                  <h3>{programme.title}</h3>
-                  <p>{programme.copy}</p>
-                  {programme.href ? (
-                    <Link className="what-we-do-card-link" href={programme.href}>
-                      Learn more →
-                    </Link>
-                  ) : null}
-                </div>
-              </article>
-            </div>
-          ))}
-        </div>
+        <WhatWeDoPosterGrid />
       </section>
 
       <section className="about-values">
