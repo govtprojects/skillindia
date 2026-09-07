@@ -399,6 +399,32 @@ h2 em {
   background: linear-gradient(135deg, #ebf9ff, #fff8dc);
 }
 
+.bal-offer-cta-inner {
+  color: var(--text-soft);
+}
+
+.bal-offer-cta .eyebrow {
+  color: var(--brand-blue) !important;
+}
+
+.bal-offer-cta h2 {
+  color: var(--deep) !important;
+}
+
+.bal-offer-cta-inner > p {
+  color: var(--text-soft) !important;
+}
+
+.bal-offer-cta-link {
+  color: var(--brand-red) !important;
+  border-bottom-color: var(--brand-red) !important;
+}
+
+.bal-offer-cta-link:hover {
+  color: var(--brand-red-deep) !important;
+  border-bottom-color: var(--brand-red-deep) !important;
+}
+
 .nav-section-submenu,
 .nav-work-submenu {
   background: var(--navy) !important;
