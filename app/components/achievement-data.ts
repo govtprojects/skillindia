@@ -76,7 +76,7 @@ export const achievementMilestones: AchievementMilestone[] = [
       { label: "Impact", value: "59 PwD (Divyang) candidates placed across various sectors" },
       { label: "Recognition", value: "Official assurance of continued support for PwD skill development initiatives" },
     ],
-    image: asset("succ..jpg"),
+    image: asset("JOB FAIR.jpg"),
     imageAlt: "Offer letter distribution ceremony for placed candidates in Ganjam",
   },
   {
@@ -111,7 +111,7 @@ export const achievementMilestones: AchievementMilestone[] = [
       { label: "Mentorship", value: "Career guidance on patience, resilience, and adaptability for professional development" },
       { label: "District support", value: "Assured continuous support from the District Collectorate for local skill enhancement and placement initiatives" },
     ],
-    image: asset("JOB FAIR.jpg"),
+    image: asset("succ..jpg"),
     imageAlt: "Convocation and placement event with corporate recruiters",
   },
   {
@@ -136,22 +136,22 @@ export const achievementMilestones: AchievementMilestone[] = [
 
 export const achievementFeatureVideos = [
   {
-    src: asset("VID-20260906-WA0001.mp4"),
+    src: asset("VID-20260906-WA0000.mp4"),
     year: "2022",
     title: "Empowering Differently-Abled Youth at Kamakhyanagar, Dhenkanal",
   },
   {
-    src: asset("VID-20260906-WA0003.mp4"),
+    src: asset("VID-20260906-WA0002(1).mp4"),
     year: "2025",
     title: "High-Level Inspection & Guidance at Skill Development Centre, Sheragada",
   },
   {
-    src: asset("VID-20260906-WA0002(1).mp4"),
+    src: asset("VID-20260906-WA0001.mp4"),
     year: "2025",
     title: "Championing Inclusive Employment — 59 Divyang Candidates Placed",
   },
   {
-    src: asset("VID-20260906-WA0000.mp4"),
+    src: asset("VID-20260906-WA0003.mp4"),
     year: "Kaushal Mahotsav",
     title: "Empowering Divyang Youth at Kaushal Mahotsav, Sambalpur",
   },

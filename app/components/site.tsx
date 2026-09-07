@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { applicationFormUrl } from "./data";
 
-const balLinks=[["Bal Vidyalaya","/bal-vidyalaya"],["What We Offer","/bal-vidyalaya/what-we-offer"]];
+const balLinks=[["Bal Vidyalaya","/bal-vidyalaya"],["What We Offer","/bal-vidyalaya/what-we-offer"],["Our Priority","/bal-vidyalaya/our-priority"]];
 const navLinks=[["Schemes","/schemes"],["Student Corner","/student-corner"],["Training Centers","/training-centers"],["Contact Us","/contact"]];
 const aboutLinks=[["Introduction","/about/introduction"],["What we do","/about/what-we-do"],["Our team","/about/our-team"]];
 const workLinks=[["Training","/our-work/training"],["Placements","/our-work/placements"],["Success stories","/our-work/success-stories"],["Achievements","/our-work/achievements"]];

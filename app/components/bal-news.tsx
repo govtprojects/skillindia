@@ -21,6 +21,7 @@ type NewsItem = {
 const filters = ["All Updates", "Events", "Press Coverage", "Awards & Recognition", "Workshops"] as const;
 
 const activity = (file: string) => `/balvidyalay/activity/${file}`;
+const independenceImage = "/independence.jpeg";
 
 const news: NewsItem[] = [
   {
@@ -54,7 +55,7 @@ const news: NewsItem[] = [
     excerpt: "On 15 August the school gathered on the terrace around the national flag, with a hand-drawn rangoli in saffron, white and green at the foot of the pole.",
     story: "Independence Day at Bal Vidyalaya was marked with flag hoisting on the terrace. Staff and learners stood in a wide circle, many holding small flags, while a peacock rangoli in tricolour sat at the base of the pole. The day mixed ceremony and pride: colour under an open sky, and a shared song around the Tiranga.",
     tags: ["Independence Day", "Flag hoisting"],
-    image: "/ind11 (37).jpeg",
+    image: independenceImage,
     alt: "Independence Day gathering around the Indian flag and rangoli on the terrace",
   },
   {
@@ -109,7 +110,7 @@ const news: NewsItem[] = [
     excerpt: "Staff and learners stood in a circle around the national flag, with a hand-drawn rangoli at the base of the pole.",
     story: "A flag-hoisting gathering brought the school onto the terrace. The Tiranga rose above a rangoli in saffron, white and green, while people held small flags and sang together. National days at Bal Vidyalaya are lived, not only told: colour, ceremony and a shared circle.",
     tags: ["Flag hoisting", "National festival"],
-    image: activity("WhatsApp Image 2026-09-03 at 4.55.04 PM.jpeg"),
+    image: independenceImage,
     alt: "Group standing around the Indian flag during a hoisting ceremony with rangoli",
   },
   {
@@ -142,7 +143,7 @@ const news: NewsItem[] = [
     excerpt: "Educators rehearsed and performed a group dance in tricolour sarees, showing children that celebration belongs to the whole school family.",
     story: "Alongside the children’s cultural programme, staff offered their own Independence Day performance. Lined in white sarees banded with saffron and green, they danced before a Happy Independence Day banner. The workshop-like rehearsal — timing, formation, courage — is part of how the school prepares festive days together.",
     tags: ["Staff", "Independence Day"],
-    image: activity("WhatsApp Image 2026-09-03 at 4.54.42 PM (1).jpeg"),
+    image: independenceImage,
     alt: "Educators dancing in tricolour sarees at the Independence Day celebration",
   },
   {
