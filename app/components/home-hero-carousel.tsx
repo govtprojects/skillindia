@@ -53,7 +53,7 @@ export function HomeHeroCarousel() {
               priority={index === 0}
               sizes="100vw"
               quality={88}
-              style={{ objectPosition: item.objectPosition ?? "center right" }}
+              style={{ objectPosition: item.objectPosition ?? "center bottom" }}
             />
             <div className="home-cover-slide-shade" />
           </article>

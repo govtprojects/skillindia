@@ -56,7 +56,7 @@ export const balPriorities: BalPriority[] = [
     summaryIcon: "❤️",
     summary:
       "Cultivating a deep, lifelong love of learning that keeps children curious, flexible, and always open to new knowledge and experiences.",
-    accent: "#2d7a72",
+    accent: "#e91e8c",
     image: activity("WhatsApp Image 2026-09-03 at 4.41.50 PM.jpeg"),
     imageAlt: "Children tying rakhis and learning together in a Bal Vidyalaya classroom",
     videos: [
@@ -94,7 +94,7 @@ export const balPriorities: BalPriority[] = [
     summaryIcon: "🧠",
     summary:
       "Building the essential meta-skills that allow children to direct their own learning journey, think critically, and apply knowledge effectively.",
-    accent: "#5b4f8a",
+    accent: "#3270fc",
     image: activity("WhatsApp Image 2026-09-03 at 4.41.33 PM.jpeg"),
     imageAlt: "Teachers leading children in a movement and learning activity at Bal Vidyalaya",
     videos: [
@@ -132,7 +132,7 @@ export const balPriorities: BalPriority[] = [
     summaryIcon: "🌟",
     summary:
       "Ensuring every learning experience is joyful and brain-responsive — igniting curiosity, fostering growth, and helping each child pursue their passions.",
-    accent: "#e96838",
+    accent: "#f5c518",
     image: activity("WhatsApp Image 2026-09-03 at 4.54.56 PM.jpeg"),
     imageAlt: "Children dancing on stage at Bal Vidyalaya Annual Function Celebrations",
     videos: [

@@ -1,0 +1,501 @@
+/* Reference palettes:
+   CSC Tiny Tech — navy #0A1F44, sky #EBF9FF, yellow #F5C518, pink #E91E8C
+   Senthiya Multi-venture — blue #3270FC, red #D2093C, navy #00306E */
+
+:root {
+  --navy: #0a1f44;
+  --navy-mid: #1a3a6c;
+  --navy-light: #2e5fa3;
+  --sky: #dff6ff;
+  --sky-soft: #ebf9ff;
+  --sky-mid: #bfefff;
+  --yellow: #f5c518;
+  --yellow-bright: #ffd740;
+  --yellow-pale: #fff8dc;
+  --pink: #e91e8c;
+  --teal: #00bcd4;
+  --brand-blue: #3270fc;
+  --brand-blue-deep: #00306e;
+  --brand-red: #d2093c;
+  --brand-red-deep: #a13328;
+
+  --ink: #061128;
+  --deep: #0a1f44;
+  --deep-mid: #1a3a6c;
+  --heading: #0a1f44;
+  --orange: #d2093c;
+  --orange-deep: #a13328;
+  --gold: #f5c518;
+  --gold-soft: #ffd740;
+  --accent: #3270fc;
+  --accent-bright: #2e5fa3;
+  --cream: #ffffff;
+  --cream-warm: #f5faff;
+  --pale: #ebf9ff;
+  --muted: #4a7aaf;
+  --line: #bfefff;
+  --text-soft: #1a3a6c;
+  --shadow-soft: 0 8px 24px rgba(10, 31, 68, 0.08);
+  --shadow-warm: 0 10px 28px rgba(210, 9, 60, 0.22);
+  --gradient-brand: linear-gradient(135deg, #0a1f44 0%, #1a3a6c 50%, #2e5fa3 100%);
+  --gradient-sunset: linear-gradient(135deg, #d2093c 0%, #e91e8c 45%, #f5c518 100%);
+  --gradient-page: linear-gradient(180deg, #ffffff 0%, #f5faff 50%, #ebf9ff 100%);
+  --gradient-band: linear-gradient(180deg, #ffffff 0%, #ebf9ff 100%);
+}
+
+body {
+  background: var(--cream-warm);
+  color: var(--ink);
+}
+
+h1,
+h2,
+h3,
+.section-heading {
+  color: var(--deep);
+}
+
+p {
+  color: var(--text-soft);
+}
+
+.topbar {
+  background: linear-gradient(90deg, var(--brand-blue-deep), var(--navy), var(--brand-blue-deep));
+  border-bottom: 3px solid var(--yellow);
+  color: #ffd9b8;
+}
+
+.nav {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  border-bottom: 3px solid var(--yellow);
+  box-shadow: 0 2px 16px rgba(10, 31, 68, 0.08);
+}
+
+.brand > b,
+.nav nav a {
+  color: var(--navy);
+}
+
+.brand small {
+  color: var(--muted);
+}
+
+.nav nav a:hover,
+.nav-section-parent:hover {
+  color: var(--brand-blue) !important;
+}
+
+.menu-button,
+.nav-section-parent {
+  color: var(--navy) !important;
+}
+
+.btn {
+  background: var(--brand-red);
+  border: 0;
+  box-shadow: var(--shadow-warm);
+  color: #fff;
+}
+
+.btn:hover {
+  background: var(--brand-red-deep);
+}
+
+.btn.small {
+  background: var(--brand-red);
+}
+
+.eyebrow {
+  color: var(--brand-blue) !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+}
+
+main > section.intro {
+  background: linear-gradient(135deg, #ebf9ff 0%, #dff6ff 50%, #fff8dc 100%);
+  border-top: 1px solid var(--sky-mid);
+  border-bottom: 1px solid var(--sky-mid);
+}
+
+main > section.section {
+  background: #fff;
+}
+
+.destination {
+  background: #fff;
+  border-color: var(--sky-mid);
+}
+
+.destination:nth-child(4n + 1) {
+  border-top: 3px solid var(--brand-blue);
+}
+
+.destination:nth-child(4n + 2) {
+  border-top: 3px solid var(--brand-red);
+}
+
+.destination:nth-child(4n + 3) {
+  border-top: 3px solid var(--yellow);
+}
+
+.destination:nth-child(4n + 4) {
+  border-top: 3px solid var(--pink);
+}
+
+.destination:hover {
+  background: var(--sky-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+.destination span {
+  color: var(--brand-blue);
+}
+
+.home-feature {
+  background: var(--gradient-brand);
+  color: #fff;
+}
+
+.home-feature .split h2 {
+  color: #fff !important;
+}
+
+.home-feature .eyebrow {
+  color: var(--yellow) !important;
+}
+
+.split p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+.quick-list {
+  border-color: rgba(191, 239, 255, 0.35) !important;
+}
+
+.quick-list a {
+  border-color: rgba(191, 239, 255, 0.35) !important;
+  color: #fff;
+}
+
+.quick-list span,
+.quick-list small {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.quick-list b {
+  color: #fff;
+}
+
+.placement-preview {
+  background: linear-gradient(135deg, #ebf9ff 0%, #dff6ff 100%);
+  border-top: 1px solid var(--sky-mid);
+  border-bottom: 1px solid var(--sky-mid);
+}
+
+.opportunity > b {
+  color: var(--brand-red);
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+}
+
+.opportunity a {
+  color: var(--brand-blue);
+}
+
+.bal-preview {
+  background: linear-gradient(135deg, #fff8dc 0%, #ebf9ff 100%);
+  border-top: 3px solid var(--yellow);
+}
+
+.bal-preview h2,
+.bal-preview h3 {
+  color: var(--deep) !important;
+}
+
+.bal-preview .link {
+  color: var(--brand-red);
+  border-bottom-color: var(--brand-red);
+}
+
+.bal-preview-highlights {
+  background: #fff;
+  border: 1px solid var(--sky-mid);
+  box-shadow: 14px 14px 0 var(--yellow);
+}
+
+.course,
+.scheme,
+.centre-grid article,
+.work-story-grid article,
+.success-story-card,
+.scheme-card {
+  background: #fff !important;
+  border-color: var(--sky-mid) !important;
+}
+
+.course:hover,
+.scheme:hover,
+.scheme-card:hover {
+  background: var(--sky-soft) !important;
+  box-shadow: var(--shadow-soft);
+}
+
+.course-topline span,
+.scheme > div,
+.scheme-meta {
+  color: var(--brand-blue) !important;
+}
+
+.notice {
+  background: linear-gradient(90deg, var(--navy), var(--navy-mid));
+  border-left: 4px solid var(--yellow);
+  color: #fff;
+}
+
+footer {
+  background: var(--navy);
+  border-top: 3px solid var(--yellow);
+  color: #dce8f2;
+}
+
+.footer-bottom {
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+.page-hero,
+.contact-hero {
+  background: linear-gradient(135deg, #ebf9ff 0%, #dff6ff 100%) !important;
+}
+
+.detail-hero {
+  background: linear-gradient(135deg, #fff8dc 0%, #ebf9ff 100%) !important;
+}
+
+.bal-offer-page,
+.bal-priority-page,
+.bal-page,
+.achievements-page,
+.what-we-do-page {
+  background: var(--cream-warm);
+}
+
+.bal-offer-card,
+.bal-priority-glance-card,
+.bal-priority-video,
+.bal-priority-points li {
+  background: #fff !important;
+  border-color: var(--sky-mid) !important;
+}
+
+.bal-priority-detail {
+  background: #fff !important;
+}
+
+.bal-priority-detail--reverse {
+  background: var(--sky-soft) !important;
+}
+
+.bal-priority-videos {
+  background: linear-gradient(180deg, #ebf9ff, #fff) !important;
+  border-color: var(--sky-mid) !important;
+}
+
+.bal-offer-hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 55%, var(--navy-light) 100%) !important;
+}
+
+.bal-offer-badge {
+  color: var(--yellow) !important;
+  border-color: rgba(245, 197, 24, 0.4) !important;
+}
+
+.placement-partners-marquee {
+  background: #fff;
+  border: 1px solid var(--sky-mid);
+}
+
+.work-placements,
+.work-placements-inner {
+  background: linear-gradient(180deg, #ebf9ff, #f5faff) !important;
+}
+
+.team-section {
+  background: var(--sky-soft) !important;
+}
+
+.about-values {
+  background: var(--gradient-brand) !important;
+}
+
+.about-highlights b {
+  color: var(--brand-red);
+}
+
+.link {
+  border-bottom-color: var(--navy);
+  color: var(--navy);
+}
+
+.link:hover {
+  color: var(--brand-red);
+}
+
+h1 em,
+h2 em {
+  color: var(--brand-red);
+}
+
+.stats b {
+  color: var(--brand-blue);
+}
+
+.bal-offer-quote blockquote,
+.bal-priority-quote blockquote {
+  background: var(--yellow-pale);
+  border-color: var(--yellow);
+  border-left: 4px solid var(--yellow);
+}
+
+.bal-offer-cta {
+  background: linear-gradient(135deg, #ebf9ff, #fff8dc);
+}
+
+.nav-section-submenu,
+.nav-work-submenu {
+  background: var(--navy) !important;
+  border-color: var(--navy-mid) !important;
+  box-shadow: 0 12px 32px rgba(10, 31, 68, 0.2) !important;
+}
+
+.nav-section-submenu a,
+.nav-work-submenu a {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.nav-section-submenu a:hover,
+.nav-work-submenu a:hover {
+  background: rgba(245, 197, 24, 0.15) !important;
+  color: var(--yellow) !important;
+}
+
+.values-section {
+  background: var(--sky-mid) !important;
+}
+
+.values-section article {
+  background: #fff !important;
+}
+
+.bal-principles {
+  background: var(--sky-soft) !important;
+}
+
+.bal-focus {
+  background: linear-gradient(135deg, #fff8dc, #ebf9ff) !important;
+  color: var(--ink);
+}
+
+.bal-focus .section-heading {
+  color: var(--deep) !important;
+}
+
+.bal-focus .focus article {
+  background: #fff !important;
+  border-color: var(--sky-mid) !important;
+  border-top: 3px solid var(--yellow) !important;
+}
+
+.bal-focus .focus article span {
+  color: var(--brand-blue) !important;
+}
+
+.bal-focus .focus h3 {
+  color: var(--deep) !important;
+}
+
+.bal-closing {
+  background: linear-gradient(135deg, #fff8dc, #ebf9ff) !important;
+}
+
+.training-activity-videos {
+  background: linear-gradient(180deg, #ebf9ff, #f5faff) !important;
+  border-color: var(--sky-mid) !important;
+}
+
+.what-we-do-card-media {
+  background: linear-gradient(180deg, #ebf9ff, #dff6ff) !important;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: #fff !important;
+  border-color: var(--sky-mid) !important;
+  color: var(--ink) !important;
+}
+
+.contact-form {
+  background: #fff !important;
+  border-color: var(--sky-mid) !important;
+}
+
+.home-cover-hero .eyebrow,
+.page-hero--image-overlay .eyebrow,
+.bal-hero .eyebrow {
+  color: #ffd07a !important;
+}
+
+.placement-partners-marquee::before {
+  background: linear-gradient(90deg, #fff, transparent) !important;
+}
+
+.placement-partners-marquee::after {
+  background: linear-gradient(270deg, #fff, transparent) !important;
+}
+
+.placement-partners--compact .placement-partners-marquee::before {
+  background: linear-gradient(90deg, #ebf9ff, transparent) !important;
+}
+
+.placement-partners--compact .placement-partners-marquee::after {
+  background: linear-gradient(270deg, #ebf9ff, transparent) !important;
+}
+
+@media (max-width: 900px) {
+  .nav nav.nav-open {
+    background: rgba(255, 255, 255, 0.98);
+    border-top: 3px solid var(--yellow);
+    box-shadow: 0 12px 28px rgba(10, 31, 68, 0.1);
+  }
+
+  .nav-section-submenu,
+  .nav-work-submenu {
+    background: transparent !important;
+    border-left-color: var(--sky-mid) !important;
+    box-shadow: none !important;
+  }
+
+  .nav-section-submenu a,
+  .nav-work-submenu a {
+    color: var(--muted) !important;
+  }
+
+  .nav-section-submenu a:hover,
+  .nav-work-submenu a:hover {
+    color: var(--brand-blue) !important;
+    background: var(--sky-soft) !important;
+  }
+
+  .nav-section-toggle {
+    background: var(--sky-soft) !important;
+    color: var(--brand-blue) !important;
+  }
+
+  .nav-section-menu.is-open .nav-section-toggle {
+    background: var(--brand-red) !important;
+    color: #fff !important;
+  }
+}
