@@ -166,25 +166,25 @@ main > section.section {
   color: var(--yellow) !important;
 }
 
-.split p:not(.eyebrow) {
+.home-feature .split p:not(.eyebrow) {
   color: rgba(255, 255, 255, 0.88) !important;
 }
 
-.quick-list {
+.home-feature .quick-list {
   border-color: rgba(191, 239, 255, 0.35) !important;
 }
 
-.quick-list a {
+.home-feature .quick-list a {
   border-color: rgba(191, 239, 255, 0.35) !important;
   color: #fff;
 }
 
-.quick-list span,
-.quick-list small {
+.home-feature .quick-list span,
+.home-feature .quick-list small {
   color: rgba(255, 255, 255, 0.7) !important;
 }
 
-.quick-list b {
+.home-feature .quick-list b {
   color: #fff;
 }
 
@@ -218,6 +218,33 @@ main > section.section {
 .bal-preview .link {
   color: var(--brand-red);
   border-bottom-color: var(--brand-red);
+}
+
+.bal-preview .split p:not(.eyebrow) {
+  color: var(--text-soft) !important;
+}
+
+.bal-preview .social-links a {
+  color: var(--navy);
+  border-color: var(--sky-mid);
+}
+
+.bal-preview .social-links a:hover {
+  background: var(--brand-blue);
+  border-color: var(--brand-blue);
+  color: #fff;
+}
+
+.bal-preview-highlights article > span {
+  color: var(--brand-red) !important;
+}
+
+.bal-preview-highlights article b {
+  color: var(--deep) !important;
+}
+
+.bal-preview-highlights article p {
+  color: #36504a !important;
 }
 
 .bal-preview-highlights {
@@ -264,6 +291,14 @@ footer {
 .footer-bottom {
   border-color: rgba(255, 255, 255, 0.15) !important;
   color: rgba(255, 255, 255, 0.65) !important;
+}
+
+.footer-bottom a {
+  color: var(--yellow);
+}
+
+.footer-bottom a:hover {
+  color: #fff;
 }
 
 .page-hero,

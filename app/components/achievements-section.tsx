@@ -26,6 +26,20 @@ export function AchievementsSection() {
       <div className="section achievements-list">
         {achievementMilestones.map((item, index) => (
           <article className="achievement-card" key={item.id}>
+            <div className="achievement-card-media">
+              <figure className="achievement-image">
+                <Image
+                  src={item.image}
+                  alt={item.imageAlt}
+                  width={1400}
+                  height={980}
+                  sizes="(max-width: 600px) 100vw, 880px"
+                  quality={90}
+                  className="achievement-photo"
+                />
+              </figure>
+              {item.video && <AchievementHoverVideo src={item.video} />}
+            </div>
             <div className="achievement-card-copy">
               <div className="achievement-card-meta">
                 <span>{item.year}</span>
@@ -34,28 +48,6 @@ export function AchievementsSection() {
               <h3>{item.title}</h3>
               <p className="achievement-card-summary">{item.summary}</p>
               <p className="achievement-card-body">{item.body}</p>
-              <ul className="achievement-highlights">
-                {item.highlights.map((highlight) => (
-                  <li key={highlight.label}>
-                    <span>{highlight.label}</span>
-                    <b>{highlight.value}</b>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="achievement-card-media">
-              <figure className="achievement-image">
-                <Image
-                  src={item.image}
-                  alt={item.imageAlt}
-                  width={1400}
-                  height={980}
-                  sizes="(max-width: 900px) 100vw, 50vw"
-                  quality={90}
-                  className="achievement-photo"
-                />
-              </figure>
-              {item.video && <AchievementHoverVideo src={item.video} />}
             </div>
           </article>
         ))}
