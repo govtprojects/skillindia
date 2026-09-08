@@ -1,3 +1,5 @@
+import { skillVideos } from "./skill-videos-data";
+
 export type AchievementMilestone = {
   id: string;
   year: string;
@@ -60,7 +62,7 @@ export const achievementMilestones: AchievementMilestone[] = [
       "Senior officials from the Skill Development & Technical Education Department, Government of Odisha, inspected training programs and interacted with candidates.",
     body:
       "The delegation was led by Ms. Deepti Mahapatro, Joint Secretary, Skill Development & Technical Education (SD&TE) Department, Government of Odisha, along with Shri Phalguni Sahu Naik, Director, South Zone. Officials conducted a comprehensive walkthrough of the training facilities and engaged in an inspiring interactive session with the trainees.",
-    image: asset("nua odisha director.jpg"),
+    image: asset("nua odisha director.jpg.jpeg"),
     imageAlt: "Official visit to the Sheragada training centre for sewing machine operator and apparel training",
   },
   {
@@ -89,22 +91,22 @@ export const achievementMilestones: AchievementMilestone[] = [
 
 export const achievementFeatureVideos = [
   {
-    src: asset("VID-20260906-WA0000.mp4"),
+    src: skillVideos[0].src,
     year: "2022",
     title: "Empowering Differently-Abled Youth at Kamakhyanagar, Dhenkanal",
   },
   {
-    src: asset("VID-20260906-WA0002(1).mp4"),
+    src: skillVideos[1].src,
     year: "2025",
     title: "High-Level Inspection & Guidance at Skill Development Centre, Sheragada",
   },
   {
-    src: asset("VID-20260906-WA0001.mp4"),
+    src: skillVideos[2].src,
     year: "2025",
     title: "Championing Inclusive Employment — 59 Divyang Candidates Placed",
   },
   {
-    src: asset("VID-20260906-WA0003.mp4"),
+    src: skillVideos[3].src,
     year: "Kaushal Mahotsav",
     title: "Empowering Divyang Youth at Kaushal Mahotsav, Sambalpur",
   },

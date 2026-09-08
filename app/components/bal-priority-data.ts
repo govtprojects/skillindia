@@ -1,5 +1,6 @@
+import { skillVideos } from "./skill-videos-data";
+
 const activity = (file: string) => `/balvidyalay/activity/${file}`;
-const activityVideo = (file: string) => `/activity video/${encodeURIComponent(file)}`;
 
 export type BalPriorityPoint = {
   icon: string;
@@ -59,14 +60,7 @@ export const balPriorities: BalPriority[] = [
     accent: "#e91e8c",
     image: activity("WhatsApp Image 2026-09-03 at 4.41.50 PM.jpeg"),
     imageAlt: "Children tying rakhis and learning together in a Bal Vidyalaya classroom",
-    videos: [
-      { src: activityVideo("VID-20251028-WA0020.mp4"), title: "Curious learners in the classroom" },
-      { src: activityVideo("video (1).mp4"), title: "Exploring with hands-on play" },
-      { src: activityVideo("video (2).mp4"), title: "A joyful start to the day" },
-      { src: activityVideo("video (3).mp4"), title: "Children discovering together" },
-      { src: activityVideo("video (4).mp4"), title: "Learning through everyday activities" },
-      { src: activityVideo("video (5).mp4"), title: "Building a love for learning" },
-    ],
+    videos: skillVideos.slice(0, 4),
     points: [
       {
         icon: "🌱",
@@ -97,14 +91,7 @@ export const balPriorities: BalPriority[] = [
     accent: "#3270fc",
     image: activity("WhatsApp Image 2026-09-03 at 4.41.33 PM.jpeg"),
     imageAlt: "Teachers leading children in a movement and learning activity at Bal Vidyalaya",
-    videos: [
-      { src: activityVideo("video (6).mp4"), title: "Following along and learning by doing" },
-      { src: activityVideo("video (7).mp4"), title: "Teacher-guided practice session" },
-      { src: activityVideo("video (8).mp4"), title: "Children learning step by step" },
-      { src: activityVideo("video (9).mp4"), title: "Self-paced classroom activity" },
-      { src: activityVideo("video (10).mp4"), title: "Skills practised with guidance" },
-      { src: activityVideo("video (11).mp4"), title: "Learning to learn in action" },
-    ],
+    videos: skillVideos.slice(4, 7),
     points: [
       {
         icon: "🗺️",
@@ -135,13 +122,7 @@ export const balPriorities: BalPriority[] = [
     accent: "#f5c518",
     image: activity("WhatsApp Image 2026-09-03 at 4.54.56 PM.jpeg"),
     imageAlt: "Children dancing on stage at Bal Vidyalaya Annual Function Celebrations",
-    videos: [
-      { src: activityVideo("A (1).mp4"), title: "Celebration and cultural performance" },
-      { src: activityVideo("A (2).mp4"), title: "Joyful movement on the floor" },
-      { src: activityVideo("A (3).mp4"), title: "Playful learning in the hall" },
-      { src: activityVideo("A (4).mp4"), title: "Festival day at school" },
-      { src: activityVideo("A (5).mp4"), title: "Everyday joy at Bal Vidyalaya" },
-    ],
+    videos: skillVideos.slice(7),
     points: [
       {
         icon: "🎨",

@@ -1,4 +1,5 @@
-import {Navbar,Footer,PageHero,Breadcrumb} from "../components/site";
-import { TrainingCentreMap } from "../components/training-centre-map";
+import { redirect } from "next/navigation";
 
-export default function Centres(){return <><Navbar/><main className="training-centres"><Breadcrumb current="Training Centers"/><PageHero eyebrow="Visit for training" title="Learning, close to home." copy="Find T2T Skill Foundation&apos;s training centre in Sheragada, Ganjam." imageSrc="/Google Maps Enhances User Experience with New Features and Partnerships.jpeg" imageAlt="Google Maps location view" imageOverlay/><section className="section training-centre-intro"><div className="training-centre-intro-copy"><p className="eyebrow">Our training centre</p><h2 className="section-heading">A place to learn, grow and move forward.</h2><p>Visit our Sheragada centre to connect with T2T Skill Foundation and explore local skill-development opportunities.</p></div><article className="training-centre-card"><div className="training-centre-card-number">01</div><div><span>Training centre</span><h3>Sheragada</h3><p><b>Skill Development Centre</b><br/>Badadnada Street, Sheragada,<br/>Ganjam, Odisha – 761106</p><a href="https://www.google.com/maps/search/?api=1&query=Block%20Office%2C%20Sheragada%2C%20Odisha%20761106" target="_blank" rel="noreferrer">Open in Google Maps <i aria-hidden="true">↗</i></a></div></article></section><TrainingCentreMap /></main><Footer/></>}
+export default function TrainingCentersRedirect() {
+  redirect("/student-corner/training-centers");
+}

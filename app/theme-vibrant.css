@@ -339,7 +339,7 @@ footer {
   border-color: var(--sky-mid) !important;
 }
 
-.bal-offer-hero {
+.bal-offer-hero:not(.bal-offer-hero--photo) {
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 55%, var(--navy-light) 100%) !important;
 }
 

@@ -3,25 +3,20 @@ import type { CSSProperties } from "react";
 import { Footer, Navbar } from "../../components/site";
 import { applicationFormUrl } from "../../components/data";
 import { balOfferBadges, balOfferings, balOfferStats } from "../../components/bal-offer-data";
+import { BalPageHero, balWhatWeOfferHeroImage } from "../../components/bal-page-hero";
 
 export default function BalWhatWeOffer() {
   return (
     <>
       <Navbar />
       <main className="bal-page bal-offer-page">
-        <section className="bal-offer-hero">
-          <div className="bal-offer-hero-inner">
-            <span className="bal-offer-badge">NCF 2022 Aligned</span>
-            <h1>What We Offer</h1>
-            <nav className="bal-offer-crumb" aria-label="Breadcrumb">
-              <Link href="/">Home</Link>
-              <span aria-hidden="true">›</span>
-              <Link href="/bal-vidyalaya">Bal Vidyalaya</Link>
-              <span aria-hidden="true">›</span>
-              <span>What We Offer</span>
-            </nav>
-          </div>
-        </section>
+        <BalPageHero
+          badge="NCF 2022 Aligned"
+          title="What We Offer"
+          imageSrc={balWhatWeOfferHeroImage}
+          imageAlt="Children learning together at Bal Vidyalaya"
+          currentPage="What We Offer"
+        />
 
         <section className="section bal-offer-intro">
           <p className="eyebrow">Our Comprehensive Programme</p>

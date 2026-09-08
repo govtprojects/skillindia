@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
 import type { CSSProperties } from "react";
 import { Footer, Navbar } from "../../components/site";
 import { balPriorities, balPriorityIntroPhotos, balPriorityQuote } from "../../components/bal-priority-data";
+import { BalPageHero, balOurPriorityHeroImage } from "../../components/bal-page-hero";
 import { BalPriorityVideoGrid } from "../../components/bal-priority-videos";
 
 export default function BalOurPriority() {
@@ -10,19 +10,13 @@ export default function BalOurPriority() {
     <>
       <Navbar />
       <main className="bal-page bal-priority-page">
-        <section className="bal-offer-hero">
-          <div className="bal-offer-hero-inner">
-            <span className="bal-offer-badge">What We Stand For</span>
-            <h1>Our Priority</h1>
-            <nav className="bal-offer-crumb" aria-label="Breadcrumb">
-              <Link href="/">Home</Link>
-              <span aria-hidden="true">›</span>
-              <Link href="/bal-vidyalaya">Bal Vidyalaya</Link>
-              <span aria-hidden="true">›</span>
-              <span>Our Priority</span>
-            </nav>
-          </div>
-        </section>
+        <BalPageHero
+          badge="What We Stand For"
+          title="Our Priority"
+          imageSrc={balOurPriorityHeroImage}
+          imageAlt="Children engaged in joyful learning at Bal Vidyalaya"
+          currentPage="Our Priority"
+        />
 
         <section className="section bal-priority-intro">
           <p className="eyebrow">Our Core Focus</p>

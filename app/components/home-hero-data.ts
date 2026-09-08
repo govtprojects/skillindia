@@ -18,7 +18,7 @@ export const homeHeroBackgrounds: HomeHeroBackground[] = [
   {
     image: asset("CONV (17).jpeg"),
     imageAlt: "Convocation ceremony at T2T Skill Foundation",
-    objectPosition: "center 56%",
+    objectPosition: "center 90%",
   },
   {
     image: asset("IMG-20241216-WA0123.jpg.jpeg"),
@@ -38,7 +38,7 @@ export const homeHeroBackgrounds: HomeHeroBackground[] = [
   {
     image: asset("IMG-20241121-WA0075.jpg.jpeg"),
     imageAlt: "Inclusive skill training at T2T",
-    objectPosition: "center 58%",
+    objectPosition: "center 40%",
   },
   {
     image: asset("A (3).jpg.jpeg"),
