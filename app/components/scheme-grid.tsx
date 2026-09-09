@@ -8,23 +8,25 @@ export function SchemeGrid() {
     <div className="scheme-ticket-grid">
       {schemeList.map(([slug, item], index) => {
         const logo = schemeLogos[slug];
+        const logoSize = logo?.size && logo.size !== "default" ? logo.size : null;
         return (
-          <Link href={`/schemes/${slug}`} className="scheme-ticket" key={slug}>
-            <div className="scheme-ticket-logo">
+          <Link href={`/schemes/${slug}`} className={`scheme-ticket${slug === "pmgdisha" ? " scheme-ticket--pmgdisha" : ""}`} key={slug}>
+            <div className={`scheme-ticket-logo${logoSize ? ` scheme-ticket-logo--${logoSize}` : ""}`}>
               {logo ? (
                 <Image
-                  className="scheme-ticket-logo-image"
+                  className={`scheme-ticket-logo-image${logoSize ? ` scheme-ticket-logo-image--${logoSize}` : ""}`}
                   src={logo.src}
                   alt={logo.alt}
-                  width={220}
-                  height={120}
-                  sizes="220px"
+                  width={logoSize === "xlarge" ? 560 : 220}
+                  height={logoSize === "xlarge" ? 320 : 120}
+                  sizes={logoSize === "xlarge" ? "560px" : "220px"}
                 />
               ) : null}
             </div>
             <h2>
               {index + 1}. {item.name}
             </h2>
+            <p className="scheme-ticket-message">{item.summary}</p>
             <span className="scheme-ticket-more">
               Learn More <i aria-hidden="true">→</i>
             </span>

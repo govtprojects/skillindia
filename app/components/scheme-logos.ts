@@ -3,12 +3,13 @@ const programLogo = (file: string) => `/program logo (2)/${encodeURIComponent(fi
 export type SchemeLogo = {
   src: string;
   alt: string;
+  size?: "default" | "large" | "xlarge";
 };
 
 export const schemeLogos: Record<string, SchemeLogo> = {
-  pmgdisha: { src: programLogo("pm disha.jpg"), alt: "PMGDISHA programme logo" },
+  pmgdisha: { src: programLogo("pm disha.jpg"), alt: "PMGDISHA programme logo", size: "xlarge" },
   "pmkvy-rpl": { src: programLogo("Pmkvy Logo Vector.svg .png"), alt: "PMKVY programme logo" },
-  "nsdc-paid-segment": { src: programLogo("nsdc.jpg"), alt: "NSDC programme logo" },
+  "nsdc-paid-segment": { src: programLogo("nsdc.jpg"), alt: "NSDC programme logo", size: "large" },
   sipda: { src: programLogo("sipda.jpg"), alt: "SIPDA programme logo" },
   "csr-projects": { src: programLogo("csr eficor.jpg"), alt: "CSR EFFICOR programme logo" },
   "cemca-ofc": { src: programLogo("csc acadamy.png"), alt: "CSC Academy programme logo" },

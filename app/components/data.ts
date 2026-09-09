@@ -15,7 +15,6 @@ export const placements=[
   ["Sewing Machine Operator","Young Brand Apparel Private Limited","Tiruppur, Tamil Nadu","Full time","150","₹13,200–₹15,500"],
   ["Sewing Machine Operator & Finisher and Packer","Ramraj Cotton Private Limited","Tiruppur, Tamil Nadu","Full time","200","₹14,400–₹17,500"],
   ["Sewing Machine Operator & Finisher and Packer for PwD Candidates","Modenik Lifestyle Private Limited","Tiruppur, Tamil Nadu","Full time","200","₹12,900–₹14,500"],
-  ["Sewing Machine Operator & Finisher and Packer for PwD Candidates","Modenik Lifestyle Private Limited","Tiruppur, Tamil Nadu","Full time","20","₹12,900–₹14,500"],
   ["Sewing Machine Operator & Finisher and Quality Checker","First Steps Babywear Pvt Ltd","Bangalore","Full time","180","₹14,500–₹16,500"],
 ] as const;
 export const placementVacancyTotal = placements.reduce((sum, [, , , , vacancies]) => sum + Number(vacancies), 0);
