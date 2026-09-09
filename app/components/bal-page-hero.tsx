@@ -1,14 +1,7 @@
 import Link from "next/link";
 
-const asset = (file: string) => `/whatwedo/${encodeURIComponent(file)}`;
-
-export const balWhatWeOfferHeroImage = asset(
-  "6 Key Reasons Why You Should Consider Data Security Solution for D365 F&SCM - ERP Software Blog.jpeg",
-);
-
-export const balOurPriorityHeroImage = asset(
-  "Las empresas buscan en la IA un aliado para seleccionar personal.jpeg",
-);
+export const balOurPriorityHeroImage = "/bv1.jpg.jpeg";
+export const balWhatWeOfferHeroImage = "/bv2.jpg.jpeg";
 
 type BalPageHeroProps = {
   badge: string;

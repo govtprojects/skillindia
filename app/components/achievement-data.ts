@@ -22,6 +22,17 @@ export const achievementStats = [
 
 export const achievementMilestones: AchievementMilestone[] = [
   {
+    id: "ambaguda-visit-2026",
+    year: "2026",
+    title: "Distinguished Officials Visit District Skill Centre, Ambaguda",
+    summary:
+      "Honoured to welcome Commissioner-cum-Secretary Mr. Aravind Agrawal, Collector Smt. Parul Patawari, and senior officials to our District Skill Centre, Ambaguda.",
+    body: "A proud moment for our team.",
+    image: "/IMG-20260909-WA0008.jpg",
+    imageAlt:
+      "Commissioner-cum-Secretary Mr. Aravind Agrawal, Collector Smt. Parul Patawari, and senior officials at District Skill Centre, Ambaguda",
+  },
+  {
     id: "dhenkanal-2022",
     year: "2022",
     title: "Empowering Differently-Abled Youth at Kamakhyanagar, Dhenkanal",
