@@ -5,6 +5,28 @@ import { TrainingCentreMap } from "../../components/training-centre-map";
 
 const sections = ["schemes", "training-centers"] as const;
 
+const trainingCentres = [
+  {
+    number: "01",
+    name: "Sheragada",
+    type: "Skill Development Centre",
+    lines: ["Badadnada Street, Sheragada,", "Ganjam, Odisha – 761106"],
+    mapHref: "https://www.google.com/maps/search/?api=1&query=Block%20Office%2C%20Sheragada%2C%20Odisha%20761106",
+  },
+  {
+    number: "02",
+    name: "Rayagada",
+    type: "District Skill Centre",
+    lines: ["Near Biju Pattnaik Indoor Stadium", "At: Ambaguda, Rayagada, Odisha – 765001"],
+  },
+  {
+    number: "03",
+    name: "Kabisuriyanagar",
+    type: "Skill Development Centre",
+    lines: ["Near Block Development Office", "At: Kabisuriyanagar, Ganjam, Odisha – 761104"],
+  },
+];
+
 export default async function StudentCornerSection({ params }: { params: Promise<{ section: string }> }) {
   const { section } = await params;
   if (!sections.includes(section as (typeof sections)[number])) notFound();
@@ -47,7 +69,7 @@ export default async function StudentCornerSection({ params }: { params: Promise
           <PageHero
             eyebrow="Visit for training"
             title="Learning, close to home."
-            copy="Find T2T Skill Foundation's training centre in Sheragada, Ganjam."
+            copy="Find T2T Skill Foundation's training centres in Sheragada, Rayagada and Kabisuriyanagar."
             imageSrc="/Google Maps Enhances User Experience with New Features and Partnerships.jpeg"
             imageAlt="Google Maps location view"
             imageOverlay
@@ -55,34 +77,36 @@ export default async function StudentCornerSection({ params }: { params: Promise
         </div>
         <section className="section training-centre-intro">
           <div className="training-centre-intro-copy">
-            <p className="eyebrow">Our training centre</p>
+            <p className="eyebrow">Our training centres</p>
             <h2 className="section-heading">A place to learn, grow and move forward.</h2>
             <p>
-              Visit our Sheragada centre to connect with T2T Skill Foundation and explore local
+              Visit a T2T Skill Foundation centre to connect with our team and explore local
               skill-development opportunities.
             </p>
           </div>
-          <article className="training-centre-card">
-            <div className="training-centre-card-number">01</div>
-            <div>
-              <span>Training centre</span>
-              <h3>Sheragada</h3>
-              <p>
-                <b>Skill Development Centre</b>
-                <br />
-                Badadnada Street, Sheragada,
-                <br />
-                Ganjam, Odisha – 761106
-              </p>
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=Block%20Office%2C%20Sheragada%2C%20Odisha%20761106"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Open in Google Maps <i aria-hidden="true">↗</i>
-              </a>
-            </div>
-          </article>
+          <div className="training-centre-grid">
+            {trainingCentres.map((centre) => (
+              <article className="training-centre-card" key={centre.number}>
+                <div className="training-centre-card-number">{centre.number}</div>
+                <div>
+                  <span>Training centre</span>
+                  <h3>{centre.name}</h3>
+                  <p>
+                    <b>{centre.type}</b>
+                    <br />
+                    {centre.lines[0]}
+                    <br />
+                    {centre.lines[1]}
+                  </p>
+                  {"mapHref" in centre && centre.mapHref ? (
+                    <a href={centre.mapHref} target="_blank" rel="noreferrer">
+                      Open in Google Maps <i aria-hidden="true">↗</i>
+                    </a>
+                  ) : null}
+                </div>
+              </article>
+            ))}
+          </div>
         </section>
         <TrainingCentreMap />
       </main>

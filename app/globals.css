@@ -243,3 +243,23 @@
 
 @import "./theme-vibrant.css";
 
+/* Slightly larger header logo and navbar type. */
+.nav{height:94px}.brand-logo{width:68px;height:68px}.brand>b{font-size:20px}.nav nav{gap:24px}.nav nav a{font-size:15px}.nav-section-parent{font:800 15px Manrope,Arial,sans-serif}.nav-section-trigger::after{font-size:15px}.nav-section-submenu a{font-size:14px!important}.nav-section-submenu i{font-size:17px}.nav-bal-link .bal-programme-mark{height:50px;max-width:160px}.menu-button{font-size:28px}
+@media(max-width:900px){.nav{height:90px}.brand-logo{width:62px;height:62px}.nav nav{top:90px}.nav nav a,.nav-section-parent,.nav-work-menu>a{font-size:15px!important}.nav-section-submenu a{font-size:13px!important}}
+@media(max-width:600px){.nav{height:84px}.brand-logo{width:56px;height:56px}.brand>b{font-size:17px}.nav nav{top:84px}}
+
+/* Training centres: three location cards, no map. */
+.training-centre-intro{grid-template-columns:1fr;gap:42px;align-items:start;padding-bottom:110px}.training-centre-intro-copy>p:last-child{max-width:640px}.training-centre-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.training-centre-grid .training-centre-card{max-width:none;box-shadow:12px 12px 0 #e7d8c5}.training-centre-grid .training-centre-card h3{font-size:clamp(26px,2.2vw,34px)}
+@media(max-width:1100px){.training-centre-grid{grid-template-columns:1fr;max-width:650px}}
+
+/* Scheme tickets: logo, numbered title, Learn More. */
+.scheme-ticket-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;background:none}.scheme-ticket{display:flex;flex-direction:column;min-height:360px;padding:34px 30px 26px;background:#fff;border:1px solid #1a3a6c;box-shadow:none;overflow:hidden;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}.scheme-ticket:hover{transform:translateY(-4px);border-color:#0a1f44;box-shadow:0 12px 28px rgba(10,31,68,.1);background:#fff}.scheme-ticket-logo{display:flex;align-items:center;justify-content:center;flex:1;min-height:150px;margin-bottom:22px}.scheme-ticket-logo-image{width:auto!important;height:118px!important;max-width:88%;object-fit:contain}.scheme-ticket h2{margin:0;color:#0a1f44;font:800 18px/1.45 Manrope,Arial,sans-serif;letter-spacing:0}.scheme-ticket-more{display:inline-flex;align-items:center;gap:8px;margin-top:28px;color:#6b7c90;font:500 15px Manrope,Arial,sans-serif}.scheme-ticket-more i{font-style:normal;transition:transform .2s ease}.scheme-ticket:hover .scheme-ticket-more{color:#0a1f44}.scheme-ticket:hover .scheme-ticket-more i{transform:translateX(4px)}
+@media(max-width:900px){.scheme-ticket-grid{gap:18px}.scheme-ticket{min-height:320px;padding:28px 22px 22px}.scheme-ticket-logo{min-height:130px}.scheme-ticket-logo-image{height:96px!important}.scheme-ticket h2{font-size:16px}}
+@media(max-width:600px){.scheme-ticket-grid{grid-template-columns:1fr;gap:16px}.scheme-ticket{min-height:300px}}
+
+/* Success story videos: play on hover, landscape frame. */
+.success-story-films{margin-top:62px;padding-top:48px;border-top:1px solid var(--line)}.success-story-films-heading{max-width:720px;margin-bottom:32px}.success-story-films-heading h2{margin:0 0 12px;font-size:clamp(32px,3.6vw,48px)}.success-story-films-heading>p{margin:0;color:var(--muted);font:15px/1.8 'Playfair Display'}.success-story-grid--video{margin-top:0}.success-story-video{position:relative;aspect-ratio:16/9;overflow:hidden;background:#0a1f44}.success-story-video video{display:block;width:100%;height:100%;object-fit:cover}.success-story-card--video{background:#fff}
+@media(max-width:600px){.success-story-films{margin-top:42px;padding-top:32px}.success-story-films-heading h2{font-size:34px}}
+
+
+
