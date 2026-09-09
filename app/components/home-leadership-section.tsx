@@ -35,6 +35,13 @@ export function HomeLeadershipSection() {
                 <a className="home-leadership-phone" href={`tel:+91${member.phone}`}>
                   +91 {member.phone}
                 </a>
+                <div className="home-leadership-message">
+                  {Array.isArray(member.message) ? (
+                    member.message.map((line) => <p key={line}>{line}</p>)
+                  ) : (
+                    <p>{member.message}</p>
+                  )}
+                </div>
               </div>
             </div>
           </article>
