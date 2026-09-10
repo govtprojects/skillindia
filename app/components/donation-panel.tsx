@@ -8,7 +8,6 @@ import {
   donationHeroImage,
   donationQrImage,
   donationUpiId,
-  type DonationAmount,
 } from "./donation-data";
 
 type DonationStep = "cause" | "amount" | "payment";
@@ -16,7 +15,9 @@ type DonationStep = "cause" | "amount" | "payment";
 export function DonationPanel() {
   const [step, setStep] = useState<DonationStep>("cause");
   const [causeIndex, setCauseIndex] = useState(0);
-  const [selectedAmount, setSelectedAmount] = useState<DonationAmount | null>(null);
+  const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
+  const [customAmount, setCustomAmount] = useState("");
+  const [customOpen, setCustomOpen] = useState(false);
   const [copied, setCopied] = useState(false);
 
   const cause = donationCauses[causeIndex];
@@ -34,7 +35,27 @@ export function DonationPanel() {
   function goToCause(index: number) {
     setCauseIndex(index);
     setSelectedAmount(null);
+    setCustomAmount("");
+    setCustomOpen(false);
     setStep("cause");
+  }
+
+  function choosePreset(amount: number) {
+    setCustomOpen(false);
+    setCustomAmount("");
+    setSelectedAmount(amount);
+  }
+
+  function openCustom() {
+    setCustomOpen(true);
+    setSelectedAmount(customAmount && Number(customAmount) > 0 ? Number(customAmount) : null);
+  }
+
+  function updateCustomAmount(value: string) {
+    const cleaned = value.replace(/[^\d]/g, "");
+    setCustomAmount(cleaned);
+    const parsed = Number(cleaned);
+    setSelectedAmount(cleaned && parsed > 0 ? parsed : null);
   }
 
   return (
@@ -109,14 +130,40 @@ export function DonationPanel() {
                   <button
                     type="button"
                     key={amount}
-                    className={`donation-amount-btn${selectedAmount === amount ? " is-selected" : ""}`}
-                    onClick={() => setSelectedAmount(amount)}
-                    aria-pressed={selectedAmount === amount}
+                    className={`donation-amount-btn${selectedAmount === amount && !customOpen ? " is-selected" : ""}`}
+                    onClick={() => choosePreset(amount)}
+                    aria-pressed={selectedAmount === amount && !customOpen}
                   >
                     ₹{amount}
                   </button>
                 ))}
+                <button
+                  type="button"
+                  className={`donation-amount-btn${customOpen ? " is-selected" : ""}`}
+                  onClick={openCustom}
+                  aria-pressed={customOpen}
+                >
+                  Custom
+                </button>
               </div>
+              {customOpen ? (
+                <label className={`donation-custom-amount${customAmount ? " is-active" : ""}`}>
+                  <span>Enter custom amount</span>
+                  <span className="donation-custom-amount-field">
+                    <b aria-hidden="true">₹</b>
+                    <input
+                      type="text"
+                      inputMode="numeric"
+                      pattern="[0-9]*"
+                      placeholder="Enter amount"
+                      value={customAmount}
+                      onChange={(event) => updateCustomAmount(event.target.value)}
+                      aria-label="Custom donation amount in rupees"
+                      autoFocus
+                    />
+                  </span>
+                </label>
+              ) : null}
               <button
                 type="button"
                 className="donation-primary-btn"

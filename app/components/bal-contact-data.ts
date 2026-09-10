@@ -33,7 +33,7 @@ export const balContactMembers: BalContactMember[] = [
 ];
 
 export const balContactLocation = {
-  name: "CSC Bal Vidyalaya Sheragada",
+  name: "Bal Vidyalaya Sheragada",
   address: "Near TVS Showroom, Sheragada, Ganjam, Odisha-761106",
   mapsUrl:
     "https://www.google.com/maps/place/CSC+BAL+VIDYALAYA+SHERAGADA/@19.5115465,84.6046071,17z/data=!3m1!4b1!4m6!3m5!1s0x3a22cb4423fa601f:0x832c27713961eefa!8m2!3d19.5115465!4d84.6046071!16s%2Fg%2F11tfn9f33d?entry=ttu",

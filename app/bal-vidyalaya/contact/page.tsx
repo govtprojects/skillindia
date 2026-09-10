@@ -93,7 +93,7 @@ export default function BalContactPage() {
             <p className="eyebrow">Find us</p>
             <h2>Our location &amp; details</h2>
             <p>
-              Visit CSC Bal Vidyalaya Sheragada on Padhi Street. We welcome families, partners and
+              Visit Bal Vidyalaya Sheragada on Padhi Street. We welcome families, partners and
               community members to connect with us in person.
             </p>
             <div className="bal-contact-location-details">
@@ -122,7 +122,7 @@ export default function BalContactPage() {
           </div>
           <div className="bal-contact-map-wrap">
             <iframe
-              title="CSC Bal Vidyalaya Sheragada location"
+              title="Bal Vidyalaya Sheragada location"
               src={balContactLocation.embedUrl}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

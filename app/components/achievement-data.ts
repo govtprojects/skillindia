@@ -104,17 +104,7 @@ export const achievementFeatureVideos = [
   {
     src: asset("VID-20260906-WA0000.mp4"),
     year: "2022",
-    title: "Empowering Differently-Abled Youth at Kamakhyanagar, Dhenkanal",
-  },
-  {
-    src: asset("VID-20260906-WA0002(1).mp4"),
-    year: "2025",
-    title: "High-Level Inspection & Guidance at Skill Development Centre, Sheragada",
-  },
-  {
-    src: asset("VID-20260906-WA0001.mp4"),
-    year: "2025",
-    title: "Championing Inclusive Employment — 59 Divyang Candidates Placed",
+    title: "Empowering Differently-Abled Youth at Skill Development Centre, Sheragada",
   },
   {
     src: asset("VID-20260906-WA0003.mp4"),

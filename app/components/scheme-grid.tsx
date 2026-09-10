@@ -23,13 +23,15 @@ export function SchemeGrid() {
                 />
               ) : null}
             </div>
-            <h2>
-              {index + 1}. {item.name}
-            </h2>
-            <p className="scheme-ticket-message">{item.summary}</p>
-            <span className="scheme-ticket-more">
-              Learn More <i aria-hidden="true">→</i>
-            </span>
+            <div className="scheme-ticket-copy">
+              <h2>
+                {index + 1}. {item.name}
+              </h2>
+              <p className="scheme-ticket-message">{item.summary}</p>
+              <span className="scheme-ticket-more">
+                Learn More <i aria-hidden="true">→</i>
+              </span>
+            </div>
           </Link>
         );
       })}
