@@ -4,6 +4,15 @@ const nextConfig: NextConfig = {
   images: {
     qualities: [75, 90, 100],
   },
+  async redirects() {
+    return [
+      {
+        source: "/favicon.ico",
+        destination: "/icon.png",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
