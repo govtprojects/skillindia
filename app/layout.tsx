@@ -1,19 +1,21 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const siteUrl = "https://www.t2tskillfoundation.org";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.t2tskillfoundation.org"),
+  metadataBase: new URL(siteUrl),
   title: "T2T Skill Foundation | Skill Development & Training",
   description: "Vocational skill development, inclusive training and career opportunities by T2T Skill Foundation.",
   icons: {
     icon: [
-      { url: "/icon.png", type: "image/png", sizes: "512x512" },
-      { url: "/icon.png", type: "image/png", sizes: "192x192" },
-      { url: "/icon.png", type: "image/png", sizes: "48x48" },
-      { url: "/icon.png", type: "image/png", sizes: "32x32" },
+      { url: `${siteUrl}/favicon-48.png`, type: "image/png", sizes: "48x48" },
+      { url: `${siteUrl}/favicon-96.png`, type: "image/png", sizes: "96x96" },
+      { url: `${siteUrl}/favicon-192.png`, type: "image/png", sizes: "192x192" },
+      { url: `${siteUrl}/icon.png`, type: "image/png", sizes: "512x512" },
     ],
-    shortcut: "/icon.png",
-    apple: [{ url: "/icon.png", type: "image/png", sizes: "180x180" }],
+    shortcut: `${siteUrl}/favicon-48.png`,
+    apple: [{ url: `${siteUrl}/favicon-192.png`, type: "image/png", sizes: "192x192" }],
   },
 };
 
