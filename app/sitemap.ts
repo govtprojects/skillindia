@@ -1,9 +1,9 @@
 import type { MetadataRoute } from "next";
 import { schemes } from "./components/data";
-
-const siteUrl = "https://www.t2tskillfoundation.org";
+import { getSiteUrl } from "../lib/site-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const siteUrl = getSiteUrl();
   const lastModified = new Date();
 
   const staticRoutes = [
@@ -32,13 +32,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticRoutes.map((path) => ({
-      url: `${siteUrl}${path}`,
+      url: new URL(path, siteUrl).toString(),
       lastModified,
       changeFrequency: (path === "" ? "weekly" : "monthly") as "weekly" | "monthly",
       priority: path === "" ? 1 : 0.7,
     })),
     ...Object.keys(schemes).map((slug) => ({
-      url: `${siteUrl}/schemes/${slug}`,
+      url: new URL(`/schemes/${slug}`, siteUrl).toString(),
       lastModified,
       changeFrequency: "monthly" as const,
       priority: 0.6,

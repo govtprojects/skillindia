@@ -1,32 +1,45 @@
 import type { Metadata } from "next";
 import { SiteJsonLd } from "./components/site-json-ld";
+import { getSiteUrl, siteDescription, siteName } from "../lib/site-config";
 import "./globals.css";
 
-const siteUrl = "https://www.t2tskillfoundation.org";
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: "T2T Skill Foundation | Skill Development & Training",
-  description: "Vocational skill development, inclusive training and career opportunities by T2T Skill Foundation.",
+  metadataBase: siteUrl,
+  title: {
+    default: `${siteName} | Skill Development & Training`,
+    template: `%s | ${siteName}`,
+  },
+  description: siteDescription,
+  applicationName: siteName,
   alternates: {
     canonical: "./",
   },
-  manifest: `${siteUrl}/site.webmanifest`,
+  manifest: "/site.webmanifest",
   openGraph: {
     type: "website",
-    url: siteUrl,
-    siteName: "T2T Skill Foundation",
+    url: siteUrl.origin,
+    siteName,
     locale: "en_IN",
+    title: `${siteName} | Skill Development & Training`,
+    description: siteDescription,
+  },
+  twitter: {
+    card: "summary",
+    title: `${siteName} | Skill Development & Training`,
+    description: siteDescription,
   },
   icons: {
     icon: [
-      { url: `${siteUrl}/favicon-48.png`, type: "image/png", sizes: "48x48" },
-      { url: `${siteUrl}/favicon.ico`, sizes: "48x48" },
-      { url: `${siteUrl}/favicon-96.png`, type: "image/png", sizes: "96x96" },
-      { url: `${siteUrl}/favicon-192.png`, type: "image/png", sizes: "192x192" },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-48.png", type: "image/png", sizes: "48x48" },
+      { url: "/favicon-96.png", type: "image/png", sizes: "96x96" },
+      { url: "/favicon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
     ],
-    shortcut: `${siteUrl}/favicon-48.png`,
-    apple: [{ url: `${siteUrl}/favicon-192.png`, type: "image/png", sizes: "192x192" }],
+    shortcut: "/favicon.ico",
+    apple: [{ url: "/favicon-192.png", type: "image/png", sizes: "192x192" }],
   },
 };
 

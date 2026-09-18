@@ -1,13 +1,14 @@
 import type { MetadataRoute } from "next";
-
-const siteUrl = "https://www.t2tskillfoundation.org";
+import { getSiteUrl } from "../lib/site-config";
 
 export default function robots(): MetadataRoute.Robots {
+  const siteUrl = getSiteUrl();
+
   return {
     rules: {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: `${siteUrl}/sitemap.xml`,
+    sitemap: new URL("/sitemap.xml", siteUrl).toString(),
   };
 }
